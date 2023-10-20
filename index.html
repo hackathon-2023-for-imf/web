@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>個人化頁面</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background-color: #3b5998;
+            color: #fff;
+            padding: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .header-buttons button {
+            padding: 10px 20px;
+            background-color: #ff4500;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        .content-wrapper {
+            flex: 1;
+            display: flex;
+        }
+
+        main {
+            flex: 3;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            background-color: #f0f8ff;
+        }
+
+        .top-section {
+            flex: 5;
+            background-color: #fff;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .section {
+            flex: 1;
+            background-color: #87CEEB;
+            margin-bottom: 10px;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        .section img {
+            width: 30px;
+            height: 30px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .section_content {
+            flex: 10;
+            height: 100%;
+            padding:1%;
+        }
+
+        .bottom-section {
+            flex: 1;
+            background-color: #e0e0e0;
+            padding: 10px;
+        }
+
+        aside {
+            flex: 2;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 20px;
+            background-color: #f0f8ff;
+            color: #333;
+        }
+
+        .aside-top {
+            flex: 5;
+            background-color: #fff;
+            padding: 10px;
+        }
+
+        .aside-bottom {
+            flex: 1;
+            background-color: #e0e0e0;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Ettoday個人化推薦新聞</h1>
+        <div class="header-buttons">
+            <button>Log In</button>
+            <button>Register</button>
+        </div>
+    </header>
+    <div class="content-wrapper">
+        <main>
+            <div class="top-section">
+                <div class="section">
+                    <img src="image1.jpg" alt="Image 1">
+                    <div class="section_content">
+                        Section 1
+                    </div>
+                </div>
+                <div class="section">
+                    <img src="image2.jpg" alt="Image 2">
+                    <div class="section_content">
+                        Section 2
+                    </div>
+                </div>
+                <div class="section">
+                    <img src="image3.jpg" alt="Image 3">
+                    <div class="section_content">
+                        Section 3
+                    </div>
+                </div>
+                <div class="section">
+                    <img src="image4.jpg" alt="Image 4">
+                    <div class="section_content">
+                        Section 4
+                    </div>
+                </div>
+                <div class="section">
+                    <img src="image5.jpg" alt="Image 5">
+                    <div class="section_content">
+                        Section 5
+                    </div>
+                </div>
+            </div>
+            <div class="bottom-section">
+            </div>
+        </main>
+        <aside>
+            <div class="aside-top">
+            </div>
+            <div class="aside-bottom">
+            </div>
+        </aside>
+    </div>
+</body>
+</html>
