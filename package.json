@@ -1,0 +1,9 @@
+{
+  "name": "hakathon",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "openai": "^4.12.4"
+  }
+}

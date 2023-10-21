@@ -1,9 +1,16 @@
+<!-- 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 -->
+<!-- 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 -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>個人化頁面</title>
+    <!-- Click News -->
+    <script src="news.js" async></script>
+    <!-- DALL-E 2 -->
+    <script src="dalle2.js" async></script>
     <style>
         html, body {
             height: 100%;
@@ -50,15 +57,23 @@
         }
 
         .top-section {
+            flex: 1;
+            background-color: #e0e0e0;
+            padding: 10px;
+        }
+
+        .bottom-section {
             flex: 5;
             background-color: #fff;
             padding: 10px;
             display: flex;
             flex-direction: column;
+            overflow: scroll;
+            max-height: 400px;
         }
 
         .section {
-            flex: 1;
+            height: 100px;  
             background-color: #87CEEB;
             margin-bottom: 10px;
             padding: 10px;
@@ -69,22 +84,30 @@
         }
 
         .section img {
-            width: 30px;
-            height: 30px;
+            width: 60px;
+            height: 60px;
             object-fit: cover;
             border-radius: 50%;
         }
 
         .section_content {
-            flex: 10;
+            margin-left: 20px;
             height: 100%;
             padding:1%;
         }
 
-        .bottom-section {
-            flex: 1;
-            background-color: #e0e0e0;
+        .ad {
+            height: 100px;
+            margin-bottom: 10px;
             padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .ad img {
+            height: 60px;
         }
 
         aside {
@@ -121,38 +144,84 @@
     <div class="content-wrapper">
         <main>
             <div class="top-section">
+            </div>
+            <div class="bottom-section">
+                <?php include('path/to/your/php_file.php'); ?>
                 <div class="section">
-                    <img src="image1.jpg" alt="Image 1">
-                    <div class="section_content">
+                    <div id="imageContainer1"></div>
+                    <div class="section_content" onclick="handleSectionContentClick()">
                         Section 1
                     </div>
                 </div>
                 <div class="section">
-                    <img src="image2.jpg" alt="Image 2">
-                    <div class="section_content">
+                    <div id="imageContainer2"></div>
+                    <div class="section_content" onclick="handleSectionContentClick()">
                         Section 2
                     </div>
                 </div>
                 <div class="section">
-                    <img src="image3.jpg" alt="Image 3">
-                    <div class="section_content">
+                    <div id="imageContainer3"></div>
+                    <div class="section_content" onclick="handleSectionContentClick()">
                         Section 3
                     </div>
                 </div>
+                <div class="ad">
+                    <img src="ad.png" alt="這是廣告">
+                    <img src="ad.png" alt="這是廣告">
+                    <img src="ad.png" alt="這是廣告">
+                </div>
                 <div class="section">
-                    <img src="image4.jpg" alt="Image 4">
-                    <div class="section_content">
+                    <div id="imageContainer4"></div>
+                    <div class="section_content" onclick="handleSectionContentClick()">
                         Section 4
                     </div>
                 </div>
                 <div class="section">
-                    <img src="image5.jpg" alt="Image 5">
-                    <div class="section_content">
+                    <div id="imageContainer5"></div>
+                    <div class="section_content" onclick="handleSectionContentClick()">
                         Section 5
                     </div>
                 </div>
-            </div>
-            <div class="bottom-section">
+                <div class="section">
+                    <div id="imageContainer6"></div>
+                    <div class="section_content" onclick="handleSectionContentClick()">
+                        Section 6
+                    </div>
+                </div>
+                <div class="ad">
+                    <img src="ad.png" alt="這是廣告">
+                    <img src="ad.png" alt="這是廣告">
+                    <img src="ad.png" alt="這是廣告">
+                </div>
+                <div class="section">
+                    <div id="imageContainer7"></div>
+                    <div class="section_content" onclick="handleSectionContentClick()">
+                        Section 7
+                    </div>
+                </div>
+                <div class="section">
+                    <div id="imageContainer8"></div>
+                    <div class="section_content" onclick="handleSectionContentClick()">
+                        Section 8
+                    </div>
+                </div>
+                <div class="section">
+                    <div id="imageContainer9"></div>
+                    <div class="section_content" onclick="handleSectionContentClick()">
+                        Section 9
+                    </div>
+                </div>
+                <div class="ad">
+                    <img src="ad.png" alt="這是廣告">
+                    <img src="ad.png" alt="這是廣告">
+                    <img src="ad.png" alt="這是廣告">
+                </div>
+                <div class="section">
+                    <div id="imageContainer10"></div>
+                    <div class="section_content" onclick="handleSectionContentClick()">
+                        Section 10
+                    </div>
+                </div>
             </div>
         </main>
         <aside>
