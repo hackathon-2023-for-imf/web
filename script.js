@@ -5,9 +5,7 @@ const themeButton = document.querySelector("#theme-btn");
 const deleteButton = document.querySelector("#delete-btn");
 
 let userText = null;
-const API_KEY = "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"; // Paste your API key here
-var jsVariable='new';
-
+const API_KEY = "PASTE-YOUR-API-KEY-HERE"; // Paste your API key here
 
 const loadDataFromLocalstorage = () => {
     // Load saved chats and theme from local storage and apply/add on the page
@@ -32,6 +30,7 @@ const createChatElement = (content, className) => {
     chatDiv.innerHTML = content;
     return chatDiv; // Return the created chat div
 }
+
 const getChatResponse = async (incomingChatDiv) => {
     const API_URL = "https://api.openai.com/v1/completions";
     const pElement = document.createElement("p");
@@ -52,14 +51,11 @@ const getChatResponse = async (incomingChatDiv) => {
             stop: null
         })
     }
-    console.log('out of try')
+
     // Send POST request to API, get response and set the reponse as paragraph element text
     try {
         const response = await (await fetch(API_URL, requestOptions)).json();
-        console.log('response')
         pElement.textContent = response.choices[0].text.trim();
-        jsVariable = pElement.textContent;
-        //connectToAzureSQL();
     } catch (error) { // Add error class to the paragraph element and set error text
         pElement.classList.add("error");
         pElement.textContent = "Oops! Something went wrong while retrieving the response. Please try again.";
@@ -71,46 +67,6 @@ const getChatResponse = async (incomingChatDiv) => {
     localStorage.setItem("all-chats", chatContainer.innerHTML);
     chatContainer.scrollTo(0, chatContainer.scrollHeight);
 }
-
-const sql = require('mssql');
-
-// Configuration for your Azure SQL Database
-const config = {
-  user: 'group7',
-  password: 'Ettoday@',
-  server: 'ettodayserver.database.windows.net',
-  database: 'news',
-  options: {
-    encrypt: true, // Use encryption
-    trustServerCertificate: false, // Change to true if using self-signed certificates (not recommended for production)
-  },
-};
-async function connectToAzureSQL() {
-    try {
-        await sql.connect(config);
-        jsVariable = 'inner'
-        const request = new sql.Request();
-    
-        // Use a parameterized query to insert the JavaScript variable
-        const query = "INSERT INTO Sentence (user_id, text, end_s) VALUES (1, @text, 1)";
-        
-        request.input('text', sql.NVarChar, jsVariable);
-    
-        const result = await request.query(query);
-        console.log('Query results:', result.recordset);
-        //displaySuccessMessage('Success Connect');
-  } catch (error) {
-    console.error('Error connecting to Azure SQL Database:', error);
-  } finally {
-    // Be sure to close the connection when done
-    sql.close();
-  }
-}
-
-//connectToAzureSQL();
-//document.getElementById('send-btn').addEventListener('click', connectToAzureSQL);
-//sendButton.addEventListener("click", connectToAzureSQL);
-
 
 const copyResponse = (copyBtn) => {
     // Copy the text content of the response to the clipboard
