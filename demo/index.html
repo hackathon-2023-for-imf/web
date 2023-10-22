@@ -1,0 +1,346 @@
+<!-- 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 -->
+<!-- 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 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>個人化頁面</title>
+    <!-- Click News -->
+    <script src="news.js" async></script>
+    <!-- DALL-E 2 -->
+    <script src="dalle2.js" async></script>
+    <!-- chatgpt -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background-color: #3b5998;
+            color: #fff;
+            padding: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .header-buttons button {
+            padding: 10px 20px;
+            background-color: #ff4500;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+
+        .aside-bottom {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .aside-bottom button{
+            padding: 10px 20px;
+            background-color: #2b00ff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 0%;
+        }
+
+        
+        .aside-bottom textarea {
+            width: 100%;
+            height: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 0%;
+            resize: none;
+            box-sizing: border-box;
+            font-size: larger;
+        }
+
+        .content-wrapper {
+            flex: 1;
+            display: flex;
+        }
+
+        main {
+            flex: 3;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            background-color: #f0f8ff;
+        }
+
+        .bottom-section {
+            flex: 5;
+            background-color: #fff;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            overflow: scroll;
+            max-height: 800px;
+        }
+
+        .section {
+            height: 100px;  
+            background-color: #87CEEB;
+            margin-bottom: 10px;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        .section img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .section_content {
+            margin-left: 20px;
+            height: 40%;
+            padding:1%;
+            font-size:18px
+        }
+
+        .ad {
+            height: 100px;
+            margin-bottom: 10px;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .ad img {
+            height: 60px;
+        }
+
+        aside {
+            flex: 2;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 20px;
+            background-color: #f0f8ff;
+            color: #333;
+        }
+
+        #aside-top {
+            flex: 5;
+            background-color: #fff;
+            padding: 10px;
+            width: 400px;
+            height: 700px;
+        }
+
+        #video-container{
+            width: 400px;
+            height: 700px;
+        }
+
+        .aside-bottom {
+            flex: 1;
+            width: 400px;
+            background-color: #e0e0e0;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Ettoday個人化推薦新聞</h1>
+        <div class="header-buttons">
+            <button>Log In</button>
+            <button>Register</button>
+        </div>
+    </header>
+    <div class="content-wrapper">
+        <main>
+            <div class="bottom-section">
+                <?php include('path/to/your/php_file.php'); ?>
+                <div class="section">
+                    <div id="imageContainer1"><img src="pic1.png"></div>
+                    <div class="section_content" data-url="https://finance.ettoday.net/news/2606127" onclick="handleSectionContentClick(event)">
+                        泓德能源今年獲得數個永續獎項　能源展中持續貫徹永續理念
+                    </div>
+                </div>
+                <div class="section">
+                    <div id="imageContainer2"><img src="pic2.png"></div>
+                    <div class="section_content" data-url="https://forum.ettoday.net/news/2604597" onclick="handleSectionContentClick(event)">
+                        低通膨時代已遠去　投資房地產未必保值
+                    </div>
+                </div>
+                <div class="section">
+                    <div id="imageContainer3"><img src="pic3.png"></div>
+                    <div class="section_content" data-url="https://finance.ettoday.net/news/2606732?redirect=1" onclick="handleSectionContentClick(event)">
+                        貿協帶領東南亞內需拓銷團　商機上看1500萬美元
+                    </div>
+                </div>
+                <div class="ad">
+                    <img src="ad.png" alt="這是廣告">
+                    <img src="ad.png" alt="這是廣告">
+                    <img src="ad.png" alt="這是廣告">
+                </div>
+                <div class="section">
+                    <div id="imageContainer4"><img src="pic4.png"></div>
+                    <div class="section_content" data-url="https://finance.ettoday.net/news/2605950?redirect=1" onclick="handleSectionContentClick(event)">
+                        CIP預計10年內完成氫能在商船的應用　並可直接在台生產
+                    </div>
+                </div>
+                <div class="section">
+                    <div id="imageContainer5"><img src="pic5.png"></div>
+                    <div class="section_content" data-url="https://finance.ettoday.net/news/2607161" onclick="handleSectionContentClick(event)">
+                        台灣大建構反詐生態系攔407萬詐騙　獲選數位部「AI 領航計畫」
+                    </div>
+                </div>
+                <div class="section">
+                    <div id="imageContainer6"><img src="pic6.png"></div>
+                    <div class="section_content" data-url="https://finance.ettoday.net/news/2606655" onclick="handleSectionContentClick(event)">
+                        台灣產業魅力東京直送　日本台灣形象展11月最高規格展出
+                    </div>
+                </div>
+                <div class="ad">
+                    <img src="ad.png" alt="這是廣告">
+                    <img src="ad.png" alt="這是廣告">
+                    <img src="ad.png" alt="這是廣告">
+                </div>
+                <div class="section">
+                    <div id="imageContainer7"><img src="pic7.png"></div>
+                    <div class="section_content" data-url="https://finance.ettoday.net/news/2605777" onclick="handleSectionContentClick(event)">
+                        工研院新科院士出爐共4位　蔡總統稱讚台灣產業需要工研院
+                    </div>
+                </div>
+                <div class="section">
+                    <div id="imageContainer8"><img src="pic8.png"></div>
+                    <div class="section_content" data-url="https://finance.ettoday.net/news/2604095" onclick="handleSectionContentClick(event)">
+                        蘋果公司「4.15%」高利活存要掰了？　合作銀行爆不堪虧損喊停
+                    </div>
+                </div>
+                <div class="section">
+                    <div id="imageContainer9"><img src="pic9.png"></div>
+                    <div class="section_content" data-url="https://forum.ettoday.net/news/2606091?redirect=1" onclick="handleSectionContentClick(event)">
+                        以巴戰爭衝擊明年全球經濟
+                    </div>
+                </div>
+                <div class="ad">
+                    <img src="ad.png" alt="這是廣告">
+                    <img src="ad.png" alt="這是廣告">
+                    <img src="ad.png" alt="這是廣告">
+                </div>
+                <div class="section">
+                    <div id="imageContainer10"><img src="pic10.png"></div>
+                    <div class="section_content" data-url="https://finance.ettoday.net/news/2607063" onclick="handleSectionContentClick(event)">
+                        頻傳熄燈消息！台灣麥當勞「陷倒店潮？」　老饕點3原因
+                    </div>
+                </div>
+            </div>
+        </main>
+        <aside>
+            
+            <div class="aside-top">
+                <div id="video-container" onclick="playVideo(8)">
+                    <video id="video1" src="demo1.mp4" width="100%" style="display: none;"></video>
+                    <video id="video2" src="demo2.mp4" width="100%" style="display: none;"></video>
+                    <video id="video3" src="video3.mp4" width="100%" style="display: none;"></video>
+                    <video id="video4" src="video4.mp4" width="100%" style="display: none;"></video>
+                    <video id="video5" src="video5.mp4" width="100%" style="display: none;"></video>
+                    <video id="video6" src="video6.mp4" width="100%" style="display: none;"></video>
+                    <video id="video7" src="video7.mp4" width="100%" style="display: none;"></video>
+                    <video id="video8" src="video8.mp4" width="100%" style="display: none;"></video>
+                  </div>
+                  <script>
+                    let currentVideo = null;
+                
+                    function playVideo(videoNumber) {
+                      if (currentVideo) {
+                        currentVideo.style.display = 'none';
+                        currentVideo.pause();
+                      }
+                
+                      const video = document.getElementById(`video${videoNumber}`);
+                      video.style.display = 'block';
+                      video.play();
+                      currentVideo = video;
+                
+                      // 监测视频是否结束
+                      video.addEventListener('ended', function() {
+                        // 继续播放视频7
+                        video.style.display = 'none';
+                        const video8 = document.getElementById('video8');
+                        video8.style.display = 'block';
+                        video8.play();
+                        currentVideo = video8;
+                      });
+                    }
+                
+                    // 自动播放视频7
+                    const video8 = document.getElementById('video7');
+                    video8.addEventListener('ended', function() {
+                      video8.play();
+                
+                    });
+                    window.onload = function() {
+                      playVideo(8);
+                    };
+                    let sectionContentClickCount = 0;
+                    let clickTimer;
+
+                    // 點擊新聞
+                    function handleSectionContentClick(event) {
+                        sectionContentClickCount++;
+                        clearTimeout(clickTimer);
+                        clickTimer = setTimeout(() => {
+                            // 點擊一下：把內容傳到prompt裡 (之後：GPT統整大意、文字&聲音輸出、digital life)
+                            if (sectionContentClickCount === 1) {
+                                playVideo(1);
+
+                                
+                            // 點擊兩下：從資料庫中抓網址，開啟新聞頁面
+                            } else if (sectionContentClickCount === 2) {
+                                var targetDiv = event.target;
+                                var url = targetDiv.getAttribute("data-url");
+                                if (url) {
+                                    window.open(url); // 導航到指定的網址
+                                }
+
+                            }
+                            sectionContentClickCount = 0;
+                        }, 300);
+                    }
+                </script>
+            </div>
+            <div class="aside-bottom">
+                <div class="typing-container">
+                    <div class="typing-content">
+                        <div class="typing-textarea">
+                        <textarea id="chat-input" spellcheck="false" placeholder="Enter a prompt here" required></textarea>
+                        <button id="send-btn" class="material-symbols-rounded" onclick=playVideo(2)>send</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </div>
+</body>
+</html>
