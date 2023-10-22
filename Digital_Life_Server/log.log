@@ -1,0 +1,1558 @@
+2023-10-21 04:09:53,652 ERROR Server.__init__() missing 1 required positional argument: 'args'
+2023-10-21 04:09:53,652 ERROR Traceback (most recent call last):
+  File "C:\Users\NTHUILST\Downloads\Digital_Life_Server-20231020T154914Z-001\Digital_Life_Server\SocketServer2.py", line 220, in <module>
+    s = Server()
+        ^^^^^^^^
+TypeError: Server.__init__() missing 1 required positional argument: 'args'
+
+2023-10-21 04:10:18,490 INFO Initializing Server...
+2023-10-21 04:10:18,492 ERROR name 'ASRService' is not defined
+2023-10-21 04:10:18,493 ERROR Traceback (most recent call last):
+  File "C:\Users\NTHUILST\Downloads\Digital_Life_Server-20231020T154914Z-001\Digital_Life_Server\SocketServer2.py", line 220, in <module>
+    s = Server()
+        ^^^^^^^^
+  File "C:\Users\NTHUILST\Downloads\Digital_Life_Server-20231020T154914Z-001\Digital_Life_Server\SocketServer2.py", line 83, in __init__
+    self.paraformer = ASRService.ASRService('./ASR/resources/config.yaml')
+                      ^^^^^^^^^^
+NameError: name 'ASRService' is not defined
+
+2023-10-21 04:11:30,229 INFO Initializing Server...
+2023-10-21 04:11:30,230 ERROR name 'ASRService' is not defined
+2023-10-21 04:11:30,230 ERROR Traceback (most recent call last):
+  File "C:\Users\NTHUILST\Downloads\Digital_Life_Server-20231020T154914Z-001\Digital_Life_Server\SocketServer2.py", line 220, in <module>
+    s = Server()
+        ^^^^^^^^
+  File "C:\Users\NTHUILST\Downloads\Digital_Life_Server-20231020T154914Z-001\Digital_Life_Server\SocketServer2.py", line 83, in __init__
+    self.paraformer = ASRService.ASRService('./ASR/resources/config.yaml')
+                      ^^^^^^^^^^
+NameError: name 'ASRService' is not defined
+
+2023-10-21 04:12:00,491 INFO Initializing Server...
+2023-10-21 04:12:00,494 INFO Initializing TTS Service for character_paimon...
+2023-10-21 04:12:00,697 ERROR 
+2023-10-21 04:12:00,697 ERROR Traceback (most recent call last):
+  File "C:\Users\NTHUILST\Downloads\Digital_Life_Server-20231020T154914Z-001\Digital_Life_Server\SocketServer2.py", line 220, in <module>
+    s = Server()
+        ^^^^^^^^
+  File "C:\Users\NTHUILST\Downloads\Digital_Life_Server-20231020T154914Z-001\Digital_Life_Server\SocketServer2.py", line 89, in __init__
+    self.tts = TTService.TTService(*self.char_name["paimon"])
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\NTHUILST\Downloads\Digital_Life_Server-20231020T154914Z-001\Digital_Life_Server\TTS\TTService.py", line 47, in __init__
+    _ = utils.load_checkpoint(model, self.net_g, None)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\NTHUILST\Downloads\Digital_Life_Server-20231020T154914Z-001\Digital_Life_Server\TTS\vits\utils.py", line 19, in load_checkpoint
+    assert os.path.isfile(checkpoint_path)
+AssertionError
+
+2023-10-21 04:15:02,913 INFO Initializing Server...
+2023-10-21 04:15:02,913 INFO Initializing TTS Service for character_paimon...
+2023-10-21 04:15:03,135 ERROR 
+2023-10-21 04:15:03,135 ERROR Traceback (most recent call last):
+  File "C:\Users\NTHUILST\Downloads\Digital_Life_Server-20231020T154914Z-001\Digital_Life_Server\SocketServer2.py", line 220, in <module>
+    s = Server()
+        ^^^^^^^^
+  File "C:\Users\NTHUILST\Downloads\Digital_Life_Server-20231020T154914Z-001\Digital_Life_Server\SocketServer2.py", line 89, in __init__
+    self.tts = TTService.TTService('TTS/models/paimon6k.json', 'TTS/models/paimon6k_390k.pth', 'character_paimon', 1)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\NTHUILST\Downloads\Digital_Life_Server-20231020T154914Z-001\Digital_Life_Server\TTS\TTService.py", line 47, in __init__
+    _ = utils.load_checkpoint(model, self.net_g, None)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\NTHUILST\Downloads\Digital_Life_Server-20231020T154914Z-001\Digital_Life_Server\TTS\vits\utils.py", line 19, in load_checkpoint
+    assert os.path.isfile(checkpoint_path)
+AssertionError
+
+2023-10-21 04:16:18,406 INFO Initializing Server...
+2023-10-21 04:16:18,408 INFO Initializing TTS Service for character_paimon...
+2023-10-21 04:16:18,838 INFO Loaded checkpoint 'TTS/models/paimon6k_390000.pth' (iteration 8864)
+2023-10-21 04:16:18,840 INFO Initializing Sentiment Engine...
+2023-10-21 04:16:19,867 INFO Error: ('IM002', '[IM002] [Microsoft][ODBC 驅動程式管理員] 找不到資料來源名稱且未指定預設的驅動程式 (0) (SQLDriverConnect)')
+2023-10-21 04:16:19,868 ERROR 'NoneType' object has no attribute 'replace'
+2023-10-21 04:16:19,934 ERROR Traceback (most recent call last):
+  File "C:\Users\NTHUILST\Downloads\Digital_Life_Server-20231020T154914Z-001\Digital_Life_Server\SocketServer2.py", line 99, in listen
+    self.send_voice(sentence)  # 判斷每一句的情感
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\NTHUILST\Downloads\Digital_Life_Server-20231020T154914Z-001\Digital_Life_Server\SocketServer2.py", line 113, in send_voice
+    self.tts.read_save(resp_text, self.tmp_proc_file,
+  File "C:\Users\NTHUILST\Downloads\Digital_Life_Server-20231020T154914Z-001\Digital_Life_Server\TTS\TTService.py", line 61, in read_save
+    au = self.read(text)  # generate audio
+         ^^^^^^^^^^^^^^^
+  File "C:\Users\NTHUILST\Downloads\Digital_Life_Server-20231020T154914Z-001\Digital_Life_Server\TTS\TTService.py", line 50, in read
+    text = text.replace('~', '！')
+           ^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'replace'
+
+2023-10-21 09:37:44,689 INFO Initializing Server...
+2023-10-21 09:37:44,689 INFO Initializing TTS Service for character_paimon...
+2023-10-21 09:37:45,165 INFO Loaded checkpoint 'TTS/models/paimon6k_390000.pth' (iteration 8864)
+2023-10-21 09:37:45,165 INFO Initializing Sentiment Engine...
+2023-10-21 09:38:01,102 INFO Error: ('08001', '[08001] [Microsoft][ODBC Driver 18 for SQL Server]具名管道提供者: 無法開啟 SQL Server 連線 [53].  (53) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 18 for SQL Server]登入逾時終止 (0); [08001] [Microsoft][ODBC Driver 18 for SQL Server]建立 SQL Server 的連接時發生網路相關或執行個體特定錯誤。找不到伺服器或是無法存取。檢查執行個體名稱是否正確以及 ettodayserver.database.windows.net.database.windows.net 執行個體是否設定為允許遠端連接。如需詳細資訊，請參閱《SQL Server 線上叢書》。 (53)')
+2023-10-21 09:38:01,102 ERROR 'NoneType' object has no attribute 'replace'
+2023-10-21 09:38:01,181 ERROR Traceback (most recent call last):
+  File "C:\Users\NTHUILST\Downloads\Digital_Life_Server-20231020T154914Z-001\Digital_Life_Server\SocketServer2.py", line 99, in listen
+    self.send_voice(sentence)  # 判斷每一句的情感
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\NTHUILST\Downloads\Digital_Life_Server-20231020T154914Z-001\Digital_Life_Server\SocketServer2.py", line 113, in send_voice
+    self.tts.read_save(resp_text, self.tmp_proc_file,
+  File "C:\Users\NTHUILST\Downloads\Digital_Life_Server-20231020T154914Z-001\Digital_Life_Server\TTS\TTService.py", line 61, in read_save
+    au = self.read(text)  # generate audio
+         ^^^^^^^^^^^^^^^
+  File "C:\Users\NTHUILST\Downloads\Digital_Life_Server-20231020T154914Z-001\Digital_Life_Server\TTS\TTService.py", line 50, in read
+    text = text.replace('~', '！')
+           ^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'replace'
+
+2023-10-21 09:50:56,165 INFO Initializing Server...
+2023-10-21 09:50:56,174 INFO Initializing TTS Service for character_paimon...
+2023-10-21 09:50:56,587 INFO Loaded checkpoint 'TTS/models/paimon6k_390000.pth' (iteration 8864)
+2023-10-21 09:50:56,602 INFO Initializing Sentiment Engine...
+2023-10-21 09:51:12,616 INFO Error: ('08001', '[08001] [Microsoft][ODBC Driver 18 for SQL Server]具名管道提供者: 無法開啟 SQL Server 連線 [53].  (53) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 18 for SQL Server]登入逾時終止 (0); [08001] [Microsoft][ODBC Driver 18 for SQL Server]建立 SQL Server 的連接時發生網路相關或執行個體特定錯誤。找不到伺服器或是無法存取。檢查執行個體名稱是否正確以及 ettodayserver.database.windows.net.database.windows.net 執行個體是否設定為允許遠端連接。如需詳細資訊，請參閱《SQL Server 線上叢書》。 (53)')
+2023-10-21 09:51:12,618 ERROR 'NoneType' object has no attribute 'replace'
+2023-10-21 09:51:12,618 ERROR Traceback (most recent call last):
+  File "C:\Users\NTHUILST\Downloads\Digital_Life_Server-20231020T154914Z-001\Digital_Life_Server\SocketServer2.py", line 99, in listen
+    self.send_voice(sentence)  # 判斷每一句的情感
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\NTHUILST\Downloads\Digital_Life_Server-20231020T154914Z-001\Digital_Life_Server\SocketServer2.py", line 113, in send_voice
+    self.tts.read_save(resp_text, self.tmp_proc_file,
+  File "C:\Users\NTHUILST\Downloads\Digital_Life_Server-20231020T154914Z-001\Digital_Life_Server\TTS\TTService.py", line 61, in read_save
+    au = self.read(text)  # generate audio
+         ^^^^^^^^^^^^^^^
+  File "C:\Users\NTHUILST\Downloads\Digital_Life_Server-20231020T154914Z-001\Digital_Life_Server\TTS\TTService.py", line 50, in read
+    text = text.replace('~', '！')
+           ^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'replace'
+
+2023-10-21 09:57:51,512 INFO Initializing Server...
+2023-10-21 09:57:51,520 INFO Initializing TTS Service for character_paimon...
+2023-10-21 09:57:51,960 INFO Loaded checkpoint 'TTS/models/paimon6k_390000.pth' (iteration 8864)
+2023-10-21 09:57:51,961 INFO Initializing Sentiment Engine...
+2023-10-21 09:58:07,664 INFO Error: ('08001', '[08001] [Microsoft][ODBC Driver 18 for SQL Server]具名管道提供者: 無法開啟 SQL Server 連線 [53].  (53) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 18 for SQL Server]登入逾時終止 (0); [08001] [Microsoft][ODBC Driver 18 for SQL Server]建立 SQL Server 的連接時發生網路相關或執行個體特定錯誤。找不到伺服器或是無法存取。檢查執行個體名稱是否正確以及 ettodayserver.database.windows.net.database.windows.net 執行個體是否設定為允許遠端連接。如需詳細資訊，請參閱《SQL Server 線上叢書》。 (53)')
+2023-10-21 09:58:07,664 ERROR 'NoneType' object has no attribute 'replace'
+2023-10-21 09:58:07,664 ERROR Traceback (most recent call last):
+  File "C:\Users\NTHUILST\Downloads\Digital_Life_Server-20231020T154914Z-001\Digital_Life_Server\SocketServer2.py", line 99, in listen
+    self.send_voice(sentence)  # 判斷每一句的情感
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\NTHUILST\Downloads\Digital_Life_Server-20231020T154914Z-001\Digital_Life_Server\SocketServer2.py", line 113, in send_voice
+    self.tts.read_save(resp_text, self.tmp_proc_file,
+  File "C:\Users\NTHUILST\Downloads\Digital_Life_Server-20231020T154914Z-001\Digital_Life_Server\TTS\TTService.py", line 61, in read_save
+    au = self.read(text)  # generate audio
+         ^^^^^^^^^^^^^^^
+  File "C:\Users\NTHUILST\Downloads\Digital_Life_Server-20231020T154914Z-001\Digital_Life_Server\TTS\TTService.py", line 50, in read
+    text = text.replace('~', '！')
+           ^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'replace'
+
+2023-10-21 10:00:36,849 INFO Initializing Server...
+2023-10-21 10:00:36,851 INFO Initializing TTS Service for character_paimon...
+2023-10-21 10:00:37,290 INFO Loaded checkpoint 'TTS/models/paimon6k_390000.pth' (iteration 8864)
+2023-10-21 10:00:37,290 INFO Initializing Sentiment Engine...
+2023-10-21 10:00:53,117 INFO Error: ('08001', '[08001] [Microsoft][ODBC Driver 18 for SQL Server]具名管道提供者: 無法開啟 SQL Server 連線 [53].  (53) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 18 for SQL Server]登入逾時終止 (0); [08001] [Microsoft][ODBC Driver 18 for SQL Server]建立 SQL Server 的連接時發生網路相關或執行個體特定錯誤。找不到伺服器或是無法存取。檢查執行個體名稱是否正確以及 ettodayserver.database.windows.net.database.windows.net 執行個體是否設定為允許遠端連接。如需詳細資訊，請參閱《SQL Server 線上叢書》。 (53)')
+2023-10-21 10:00:53,117 ERROR 'NoneType' object has no attribute 'replace'
+2023-10-21 10:00:53,117 ERROR Traceback (most recent call last):
+  File "C:\Users\NTHUILST\Downloads\Digital_Life_Server-20231020T154914Z-001\Digital_Life_Server\SocketServer2.py", line 99, in listen
+    self.send_voice(sentence)  # 判斷每一句的情感
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\NTHUILST\Downloads\Digital_Life_Server-20231020T154914Z-001\Digital_Life_Server\SocketServer2.py", line 113, in send_voice
+    self.tts.read_save(resp_text, self.tmp_proc_file,
+  File "C:\Users\NTHUILST\Downloads\Digital_Life_Server-20231020T154914Z-001\Digital_Life_Server\TTS\TTService.py", line 61, in read_save
+    au = self.read(text)  # generate audio
+         ^^^^^^^^^^^^^^^
+  File "C:\Users\NTHUILST\Downloads\Digital_Life_Server-20231020T154914Z-001\Digital_Life_Server\TTS\TTService.py", line 50, in read
+    text = text.replace('~', '！')
+           ^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'replace'
+
+2023-10-21 10:12:47,195 INFO Initializing Server...
+2023-10-21 10:12:47,195 INFO Initializing TTS Service for character_paimon...
+2023-10-21 10:12:47,602 INFO Loaded checkpoint 'TTS/models/paimon6k_390000.pth' (iteration 8864)
+2023-10-21 10:12:47,618 INFO Initializing Sentiment Engine...
+2023-10-21 10:13:03,868 INFO Error: ('08001', '[08001] [Microsoft][ODBC Driver 18 for SQL Server]具名管道提供者: 無法開啟 SQL Server 連線 [53].  (53) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 18 for SQL Server]登入逾時終止 (0); [08001] [Microsoft][ODBC Driver 18 for SQL Server]建立 SQL Server 的連接時發生網路相關或執行個體特定錯誤。找不到伺服器或是無法存取。檢查執行個體名稱是否正確以及 ettodayserver.database.windows.net.database.windows.net 執行個體是否設定為允許遠端連接。如需詳細資訊，請參閱《SQL Server 線上叢書》。 (53)')
+2023-10-21 10:13:03,868 ERROR 'NoneType' object has no attribute 'replace'
+2023-10-21 10:13:03,868 ERROR Traceback (most recent call last):
+  File "C:\Users\NTHUILST\Downloads\Digital_Life_Server-20231020T154914Z-001\Digital_Life_Server\SocketServer2.py", line 99, in listen
+    self.send_voice(sentence)  # 判斷每一句的情感
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\NTHUILST\Downloads\Digital_Life_Server-20231020T154914Z-001\Digital_Life_Server\SocketServer2.py", line 113, in send_voice
+    self.tts.read_save(resp_text, self.tmp_proc_file,
+  File "C:\Users\NTHUILST\Downloads\Digital_Life_Server-20231020T154914Z-001\Digital_Life_Server\TTS\TTService.py", line 61, in read_save
+    au = self.read(text)  # generate audio
+         ^^^^^^^^^^^^^^^
+  File "C:\Users\NTHUILST\Downloads\Digital_Life_Server-20231020T154914Z-001\Digital_Life_Server\TTS\TTService.py", line 50, in read
+    text = text.replace('~', '！')
+           ^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'replace'
+
+2023-10-21 10:26:11,146 INFO Initializing Server...
+2023-10-21 10:26:11,146 INFO Initializing TTS Service for character_paimon...
+2023-10-21 10:26:11,571 INFO Loaded checkpoint 'TTS/models/paimon6k_390000.pth' (iteration 8864)
+2023-10-21 10:26:11,571 INFO Initializing Sentiment Engine...
+2023-10-21 10:26:12,259 ERROR name 'DefaultAzureCredential' is not defined
+2023-10-21 10:26:12,264 ERROR Traceback (most recent call last):
+  File "C:\Users\NTHUILST\Downloads\Digital_Life_Server-20231020T154914Z-001\Digital_Life_Server\SocketServer2.py", line 225, in <module>
+    sentence = s.get_sentence()
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\NTHUILST\Downloads\Digital_Life_Server-20231020T154914Z-001\Digital_Life_Server\SocketServer2.py", line 190, in get_sentence
+    conn, cursor = self.connect_to_azure_sql()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\NTHUILST\Downloads\Digital_Life_Server-20231020T154914Z-001\Digital_Life_Server\SocketServer2.py", line 172, in connect_to_azure_sql
+    credentials = DefaultAzureCredential()
+                  ^^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'DefaultAzureCredential' is not defined
+
+2023-10-21 10:27:05,259 INFO Initializing Server...
+2023-10-21 10:28:03,087 INFO Initializing TTS Service for character_paimon...
+2023-10-21 10:28:03,540 INFO Loaded checkpoint 'TTS/models/paimon6k_390000.pth' (iteration 8864)
+2023-10-21 10:28:03,540 INFO Initializing Sentiment Engine...
+2023-10-21 10:28:04,708 INFO No environment configuration found.
+2023-10-21 10:28:04,710 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 10:28:19,759 INFO Error: ('08001', '[08001] [Microsoft][ODBC Driver 18 for SQL Server]具名管道提供者: 無法開啟 SQL Server 連線 [53].  (53) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 18 for SQL Server]登入逾時終止 (0); [08001] [Microsoft][ODBC Driver 18 for SQL Server]建立 SQL Server 的連接時發生網路相關或執行個體特定錯誤。找不到伺服器或是無法存取。檢查執行個體名稱是否正確以及 ettodayserver.database.windows.net.database.windows.net 執行個體是否設定為允許遠端連接。如需詳細資訊，請參閱《SQL Server 線上叢書》。 (53)')
+2023-10-21 10:28:19,764 ERROR 'NoneType' object has no attribute 'replace'
+2023-10-21 10:28:19,764 ERROR Traceback (most recent call last):
+  File "C:\Users\NTHUILST\Downloads\Digital_Life_Server-20231020T154914Z-001\Digital_Life_Server\SocketServer2.py", line 100, in listen
+    self.send_voice(sentence)  # 判斷每一句的情感
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\NTHUILST\Downloads\Digital_Life_Server-20231020T154914Z-001\Digital_Life_Server\SocketServer2.py", line 114, in send_voice
+    self.tts.read_save(resp_text, self.tmp_proc_file,
+  File "C:\Users\NTHUILST\Downloads\Digital_Life_Server-20231020T154914Z-001\Digital_Life_Server\TTS\TTService.py", line 61, in read_save
+    au = self.read(text)  # generate audio
+         ^^^^^^^^^^^^^^^
+  File "C:\Users\NTHUILST\Downloads\Digital_Life_Server-20231020T154914Z-001\Digital_Life_Server\TTS\TTService.py", line 50, in read
+    text = text.replace('~', '！')
+           ^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'replace'
+
+2023-10-21 10:39:35,681 INFO Initializing Server...
+2023-10-21 10:39:35,681 INFO Initializing TTS Service for character_paimon...
+2023-10-21 10:39:36,133 INFO Loaded checkpoint 'TTS/models/paimon6k_390000.pth' (iteration 8864)
+2023-10-21 10:39:36,133 INFO Initializing Sentiment Engine...
+2023-10-21 10:39:36,915 ERROR name 'get_local_ip' is not defined
+2023-10-21 10:39:36,930 ERROR Traceback (most recent call last):
+  File "C:\Users\NTHUILST\Downloads\Digital_Life_Server-20231020T154914Z-001\Digital_Life_Server\SocketServer2.py", line 243, in <module>
+    ip = get_local_ip()
+         ^^^^^^^^^^^^
+NameError: name 'get_local_ip' is not defined
+
+2023-10-21 10:39:53,915 INFO Initializing Server...
+2023-10-21 10:39:53,915 INFO Initializing TTS Service for character_paimon...
+2023-10-21 10:39:54,352 INFO Loaded checkpoint 'TTS/models/paimon6k_390000.pth' (iteration 8864)
+2023-10-21 10:39:54,352 INFO Initializing Sentiment Engine...
+2023-10-21 10:39:55,102 ERROR Server.get_local_ip() takes 0 positional arguments but 1 was given
+2023-10-21 10:39:55,113 ERROR Traceback (most recent call last):
+  File "C:\Users\NTHUILST\Downloads\Digital_Life_Server-20231020T154914Z-001\Digital_Life_Server\SocketServer2.py", line 243, in <module>
+    ip = s.get_local_ip()
+         ^^^^^^^^^^^^^^^^
+TypeError: Server.get_local_ip() takes 0 positional arguments but 1 was given
+
+2023-10-21 10:40:25,416 INFO Initializing Server...
+2023-10-21 10:40:25,421 INFO Initializing TTS Service for character_paimon...
+2023-10-21 10:40:25,852 INFO Loaded checkpoint 'TTS/models/paimon6k_390000.pth' (iteration 8864)
+2023-10-21 10:40:25,852 INFO Initializing Sentiment Engine...
+2023-10-21 10:40:26,617 INFO 140.114.41.84
+2023-10-21 10:40:26,617 INFO No environment configuration found.
+2023-10-21 10:40:26,617 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 10:40:41,691 INFO Error: ('08001', '[08001] [Microsoft][ODBC Driver 18 for SQL Server]具名管道提供者: 無法開啟 SQL Server 連線 [53].  (53) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 18 for SQL Server]登入逾時終止 (0); [08001] [Microsoft][ODBC Driver 18 for SQL Server]建立 SQL Server 的連接時發生網路相關或執行個體特定錯誤。找不到伺服器或是無法存取。檢查執行個體名稱是否正確以及 ettodayserver.database.windows.net.database.windows.net 執行個體是否設定為允許遠端連接。如需詳細資訊，請參閱《SQL Server 線上叢書》。 (53)')
+2023-10-21 10:40:41,691 ERROR 'NoneType' object has no attribute 'replace'
+2023-10-21 10:40:41,691 ERROR Traceback (most recent call last):
+  File "C:\Users\NTHUILST\Downloads\Digital_Life_Server-20231020T154914Z-001\Digital_Life_Server\SocketServer2.py", line 101, in listen
+    self.send_voice(sentence)  # 判斷每一句的情感
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\NTHUILST\Downloads\Digital_Life_Server-20231020T154914Z-001\Digital_Life_Server\SocketServer2.py", line 115, in send_voice
+    self.tts.read_save(resp_text, self.tmp_proc_file,
+  File "C:\Users\NTHUILST\Downloads\Digital_Life_Server-20231020T154914Z-001\Digital_Life_Server\TTS\TTService.py", line 61, in read_save
+    au = self.read(text)  # generate audio
+         ^^^^^^^^^^^^^^^
+  File "C:\Users\NTHUILST\Downloads\Digital_Life_Server-20231020T154914Z-001\Digital_Life_Server\TTS\TTService.py", line 50, in read
+    text = text.replace('~', '！')
+           ^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'replace'
+
+2023-10-21 12:14:47,380 INFO Initializing Server...
+2023-10-21 12:14:47,380 INFO Initializing TTS Service for character_paimon...
+2023-10-21 12:14:47,802 INFO Loaded checkpoint 'TTS/models/paimon6k_390000.pth' (iteration 8864)
+2023-10-21 12:14:47,802 INFO Initializing Sentiment Engine...
+2023-10-21 12:14:48,467 INFO 140.114.41.84
+2023-10-21 12:14:48,468 INFO No environment configuration found.
+2023-10-21 12:14:48,470 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 12:14:56,364 ERROR cannot access local variable 'sentence' where it is not associated with a value
+2023-10-21 12:14:56,380 ERROR Traceback (most recent call last):
+  File "C:\Users\NTHUILST\Downloads\Digital_Life_Server-20231020T154914Z-001\Digital_Life_Server\SocketServer2.py", line 246, in <module>
+    sentence = s.get_sentence()
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\NTHUILST\Downloads\Digital_Life_Server-20231020T154914Z-001\Digital_Life_Server\SocketServer2.py", line 206, in get_sentence
+    return sentence
+           ^^^^^^^^
+UnboundLocalError: cannot access local variable 'sentence' where it is not associated with a value
+
+2023-10-21 12:16:37,267 INFO Initializing Server...
+2023-10-21 12:16:37,267 INFO Initializing TTS Service for character_paimon...
+2023-10-21 12:16:37,677 INFO Loaded checkpoint 'TTS/models/paimon6k_390000.pth' (iteration 8864)
+2023-10-21 12:16:37,677 INFO Initializing Sentiment Engine...
+2023-10-21 12:16:38,349 INFO 140.114.41.84
+2023-10-21 12:16:38,349 INFO No environment configuration found.
+2023-10-21 12:16:38,364 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 12:16:41,146 ERROR cannot access local variable 'sentence' where it is not associated with a value
+2023-10-21 12:16:41,146 ERROR Traceback (most recent call last):
+  File "C:\Users\NTHUILST\Downloads\Digital_Life_Server-20231020T154914Z-001\Digital_Life_Server\SocketServer2.py", line 246, in <module>
+    sentence = s.get_sentence()
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\NTHUILST\Downloads\Digital_Life_Server-20231020T154914Z-001\Digital_Life_Server\SocketServer2.py", line 206, in get_sentence
+    return sentence
+           ^^^^^^^^
+UnboundLocalError: cannot access local variable 'sentence' where it is not associated with a value
+
+2023-10-21 14:19:16,240 INFO Initializing Server...
+2023-10-21 14:19:16,240 INFO Initializing TTS Service for character_paimon...
+2023-10-21 14:19:16,678 INFO Loaded checkpoint 'TTS/models/paimon6k_390000.pth' (iteration 8864)
+2023-10-21 14:19:16,678 INFO Initializing Sentiment Engine...
+2023-10-21 14:19:17,335 INFO 140.114.41.84
+2023-10-21 14:19:17,335 INFO No environment configuration found.
+2023-10-21 14:19:17,335 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 14:19:20,147 ERROR 'pyodbc.Row' object has no attribute 'replace'
+2023-10-21 14:19:20,147 ERROR Traceback (most recent call last):
+  File "C:\Users\NTHUILST\Downloads\Digital_Life_Server-20231020T154914Z-001\Digital_Life_Server\SocketServer2.py", line 101, in listen
+    self.send_voice(sentence)  # 判斷每一句的情感
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\NTHUILST\Downloads\Digital_Life_Server-20231020T154914Z-001\Digital_Life_Server\SocketServer2.py", line 115, in send_voice
+    self.tts.read_save(resp_text, self.tmp_proc_file,
+  File "C:\Users\NTHUILST\Downloads\Digital_Life_Server-20231020T154914Z-001\Digital_Life_Server\TTS\TTService.py", line 61, in read_save
+    au = self.read(text)  # generate audio
+         ^^^^^^^^^^^^^^^
+  File "C:\Users\NTHUILST\Downloads\Digital_Life_Server-20231020T154914Z-001\Digital_Life_Server\TTS\TTService.py", line 50, in read
+    text = text.replace('~', '！')
+           ^^^^^^^^^^^^
+AttributeError: 'pyodbc.Row' object has no attribute 'replace'
+
+2023-10-21 14:23:40,257 INFO Initializing Server...
+2023-10-21 14:23:40,266 INFO Initializing TTS Service for character_paimon...
+2023-10-21 14:23:40,709 INFO Loaded checkpoint 'TTS/models/paimon6k_390000.pth' (iteration 8864)
+2023-10-21 14:23:40,709 INFO Initializing Sentiment Engine...
+2023-10-21 14:23:41,725 INFO 140.114.41.84
+2023-10-21 14:23:41,727 INFO No environment configuration found.
+2023-10-21 14:23:41,727 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 14:23:44,349 ERROR 'pyodbc.Row' object has no attribute 'replace'
+2023-10-21 14:23:44,353 ERROR Traceback (most recent call last):
+  File "C:\Users\NTHUILST\Downloads\Digital_Life_Server-20231020T154914Z-001\Digital_Life_Server\SocketServer2.py", line 101, in listen
+    self.send_voice(sentence)  # 判斷每一句的情感
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\NTHUILST\Downloads\Digital_Life_Server-20231020T154914Z-001\Digital_Life_Server\SocketServer2.py", line 115, in send_voice
+    self.tts.read_save(resp_text, self.tmp_proc_file,
+  File "C:\Users\NTHUILST\Downloads\Digital_Life_Server-20231020T154914Z-001\Digital_Life_Server\TTS\TTService.py", line 61, in read_save
+    au = self.read(text)  # generate audio
+         ^^^^^^^^^^^^^^^
+  File "C:\Users\NTHUILST\Downloads\Digital_Life_Server-20231020T154914Z-001\Digital_Life_Server\TTS\TTService.py", line 50, in read
+    text = text.replace('~', '！')
+           ^^^^^^^^^^^^
+AttributeError: 'pyodbc.Row' object has no attribute 'replace'
+
+2023-10-21 14:27:55,597 INFO Initializing Server...
+2023-10-21 14:27:55,597 INFO Initializing TTS Service for character_paimon...
+2023-10-21 14:27:56,037 INFO Loaded checkpoint 'TTS/models/paimon6k_390000.pth' (iteration 8864)
+2023-10-21 14:27:56,037 INFO Initializing Sentiment Engine...
+2023-10-21 14:27:56,741 INFO 140.114.41.84
+2023-10-21 14:27:56,741 INFO No environment configuration found.
+2023-10-21 14:27:56,741 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 14:28:00,444 ERROR Error opening 'tmp/server_processed.wav': System error.
+2023-10-21 14:28:00,449 ERROR Traceback (most recent call last):
+  File "C:\Users\NTHUILST\Downloads\Digital_Life_Server-20231020T154914Z-001\Digital_Life_Server\SocketServer2.py", line 105, in listen
+    self.send_voice(text)  # 判斷每一句的情感
+    ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\NTHUILST\Downloads\Digital_Life_Server-20231020T154914Z-001\Digital_Life_Server\SocketServer2.py", line 119, in send_voice
+    self.tts.read_save(resp_text, self.tmp_proc_file,
+  File "C:\Users\NTHUILST\Downloads\Digital_Life_Server-20231020T154914Z-001\Digital_Life_Server\TTS\TTService.py", line 62, in read_save
+    soundfile.write(filename, au, sr)  # 儲存音檔
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\NTHUILST\Downloads\Digital_Life_Server-20231020T154914Z-001\Digital_Life_Server\digital_life\Lib\site-packages\soundfile.py", line 343, in write
+    with SoundFile(file, 'w', samplerate, channels,
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\NTHUILST\Downloads\Digital_Life_Server-20231020T154914Z-001\Digital_Life_Server\digital_life\Lib\site-packages\soundfile.py", line 658, in __init__
+    self._file = self._open(file, mode_int, closefd)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\NTHUILST\Downloads\Digital_Life_Server-20231020T154914Z-001\Digital_Life_Server\digital_life\Lib\site-packages\soundfile.py", line 1216, in _open
+    raise LibsndfileError(err, prefix="Error opening {0!r}: ".format(self.name))
+soundfile.LibsndfileError: Error opening 'tmp/server_processed.wav': System error.
+
+2023-10-21 15:35:56,733 INFO Initializing Server...
+2023-10-21 15:35:56,735 INFO Initializing TTS Service for character_paimon...
+2023-10-21 15:35:57,184 INFO Loaded checkpoint 'TTS/models/paimon6k_390000.pth' (iteration 8864)
+2023-10-21 15:35:57,186 INFO Initializing Sentiment Engine...
+2023-10-21 15:35:57,843 INFO 140.114.41.84
+2023-10-21 15:35:57,844 INFO No environment configuration found.
+2023-10-21 15:35:57,845 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 15:36:00,944 ERROR Server.send_voice() missing 5 required positional arguments: 'id', 'audio', 'sample_rate', 'format', and 'sentiment'
+2023-10-21 15:36:00,944 ERROR Traceback (most recent call last):
+  File "C:\Users\NTHUILST\Downloads\Digital_Life_Server-20231020T154914Z-001\Digital_Life_Server\SocketServer2.py", line 105, in listen
+    self.send_voice(text)  # 判斷每一句的情感
+    ^^^^^^^^^^^^^^^^^^^^^
+TypeError: Server.send_voice() missing 5 required positional arguments: 'id', 'audio', 'sample_rate', 'format', and 'sentiment'
+
+2023-10-21 15:44:38,834 INFO Initializing Server...
+2023-10-21 15:44:38,834 INFO Initializing TTS Service for character_paimon...
+2023-10-21 15:44:39,272 INFO Loaded checkpoint 'TTS/models/paimon6k_390000.pth' (iteration 8864)
+2023-10-21 15:44:39,272 INFO Initializing Sentiment Engine...
+2023-10-21 15:44:40,283 INFO 140.114.41.84
+2023-10-21 15:44:40,283 INFO No environment configuration found.
+2023-10-21 15:44:40,285 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 15:44:43,975 ERROR Error opening 'tmp/server_processed.wav': System error.
+2023-10-21 15:44:43,989 ERROR Traceback (most recent call last):
+  File "C:\Users\NTHUILST\Downloads\Digital_Life_Server-20231020T154914Z-001\Digital_Life_Server\SocketServer2.py", line 105, in listen
+    self.send_voice(text, id)  # 判斷每一句的情感
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\NTHUILST\Downloads\Digital_Life_Server-20231020T154914Z-001\Digital_Life_Server\SocketServer2.py", line 119, in send_voice
+    self.tts.read_save(resp_text, self.tmp_proc_file,
+  File "C:\Users\NTHUILST\Downloads\Digital_Life_Server-20231020T154914Z-001\Digital_Life_Server\TTS\TTService.py", line 62, in read_save
+    soundfile.write(filename, au, sr)  # 儲存音檔
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\NTHUILST\Downloads\Digital_Life_Server-20231020T154914Z-001\Digital_Life_Server\digital_life\Lib\site-packages\soundfile.py", line 343, in write
+    with SoundFile(file, 'w', samplerate, channels,
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\NTHUILST\Downloads\Digital_Life_Server-20231020T154914Z-001\Digital_Life_Server\digital_life\Lib\site-packages\soundfile.py", line 658, in __init__
+    self._file = self._open(file, mode_int, closefd)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\NTHUILST\Downloads\Digital_Life_Server-20231020T154914Z-001\Digital_Life_Server\digital_life\Lib\site-packages\soundfile.py", line 1216, in _open
+    raise LibsndfileError(err, prefix="Error opening {0!r}: ".format(self.name))
+soundfile.LibsndfileError: Error opening 'tmp/server_processed.wav': System error.
+
+2023-10-21 15:47:41,651 INFO Initializing Server...
+2023-10-21 15:47:41,652 INFO Initializing TTS Service for character_paimon...
+2023-10-21 15:47:42,084 INFO Loaded checkpoint 'TTS/models/paimon6k_390000.pth' (iteration 8864)
+2023-10-21 15:47:42,084 INFO Initializing Sentiment Engine...
+2023-10-21 15:47:42,709 INFO 140.114.41.84
+2023-10-21 15:47:42,709 INFO No environment configuration found.
+2023-10-21 15:47:42,709 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 15:47:46,330 INFO VITS Synth Done, time used 0.98
+2023-10-21 15:47:46,339 INFO Sentiment Engine Infer: 0
+2023-10-21 15:47:46,339 ERROR byte indices must be integers or slices, not str
+2023-10-21 15:47:46,339 ERROR Traceback (most recent call last):
+  File "C:\Users\NTHUILST\Downloads\Digital_Life_Server-20231020T154914Z-001\Digital_Life_Server\SocketServer2.py", line 105, in listen
+    self.send_voice(text, id)  # 判斷每一句的情感
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\NTHUILST\Downloads\Digital_Life_Server-20231020T154914Z-001\Digital_Life_Server\SocketServer2.py", line 124, in send_voice
+    self.insert_data(id, data['audio'], data['sample_rate'], data['format'], senti)
+                         ~~~~^^^^^^^^^
+TypeError: byte indices must be integers or slices, not str
+
+2023-10-21 15:57:13,834 INFO Initializing Server...
+2023-10-21 15:57:13,834 INFO Initializing TTS Service for character_paimon...
+2023-10-21 15:57:14,225 INFO Loaded checkpoint 'TTS/models/paimon6k_390000.pth' (iteration 8864)
+2023-10-21 15:57:14,225 INFO Initializing Sentiment Engine...
+2023-10-21 15:57:14,930 INFO 140.114.41.84
+2023-10-21 15:57:14,930 INFO No environment configuration found.
+2023-10-21 15:57:14,930 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 15:57:18,596 INFO VITS Synth Done, time used 0.93
+2023-10-21 15:57:18,616 INFO Sentiment Engine Infer: 0
+2023-10-21 15:57:18,616 INFO No environment configuration found.
+2023-10-21 15:57:18,616 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 15:57:19,531 INFO finished voice process and sentimental analysis
+2023-10-21 15:57:20,034 INFO Stream finished.
+2023-10-21 15:57:20,628 INFO VITS Synth Done, time used 0.59
+2023-10-21 15:57:20,664 INFO Sentiment Engine Infer: 0
+2023-10-21 15:57:20,667 INFO No environment configuration found.
+2023-10-21 15:57:20,667 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 15:57:21,554 INFO finished voice process and sentimental analysis
+2023-10-21 15:57:22,057 INFO Stream finished.
+2023-10-21 15:57:22,622 INFO VITS Synth Done, time used 0.56
+2023-10-21 15:57:22,634 INFO Sentiment Engine Infer: 0
+2023-10-21 15:57:22,637 INFO No environment configuration found.
+2023-10-21 15:57:22,637 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 15:57:23,525 INFO finished voice process and sentimental analysis
+2023-10-21 15:57:24,028 INFO Stream finished.
+2023-10-21 15:57:24,572 INFO VITS Synth Done, time used 0.54
+2023-10-21 15:57:24,583 INFO Sentiment Engine Infer: 0
+2023-10-21 15:57:24,587 INFO No environment configuration found.
+2023-10-21 15:57:24,587 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 15:57:25,476 INFO finished voice process and sentimental analysis
+2023-10-21 15:57:25,979 INFO Stream finished.
+2023-10-21 15:57:26,544 INFO VITS Synth Done, time used 0.56
+2023-10-21 15:57:26,552 INFO Sentiment Engine Infer: 0
+2023-10-21 15:57:26,555 INFO No environment configuration found.
+2023-10-21 15:57:26,556 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 15:57:27,443 INFO finished voice process and sentimental analysis
+2023-10-21 15:57:27,944 INFO Stream finished.
+2023-10-21 15:57:28,514 INFO VITS Synth Done, time used 0.57
+2023-10-21 15:57:28,522 INFO Sentiment Engine Infer: 0
+2023-10-21 15:57:28,525 INFO No environment configuration found.
+2023-10-21 15:57:28,526 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 15:57:29,412 INFO finished voice process and sentimental analysis
+2023-10-21 15:57:29,914 INFO Stream finished.
+2023-10-21 15:57:30,449 INFO VITS Synth Done, time used 0.53
+2023-10-21 15:57:30,459 INFO Sentiment Engine Infer: 0
+2023-10-21 15:57:30,462 INFO No environment configuration found.
+2023-10-21 15:57:30,462 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 15:57:31,374 INFO finished voice process and sentimental analysis
+2023-10-21 15:57:31,876 INFO Stream finished.
+2023-10-21 15:57:32,437 INFO VITS Synth Done, time used 0.56
+2023-10-21 15:57:32,446 INFO Sentiment Engine Infer: 0
+2023-10-21 15:57:32,449 INFO No environment configuration found.
+2023-10-21 15:57:32,449 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 15:57:33,337 INFO finished voice process and sentimental analysis
+2023-10-21 15:57:33,839 INFO Stream finished.
+2023-10-21 15:57:34,417 INFO VITS Synth Done, time used 0.57
+2023-10-21 15:57:34,456 INFO Sentiment Engine Infer: 0
+2023-10-21 15:57:34,461 INFO No environment configuration found.
+2023-10-21 15:57:34,461 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 15:57:35,348 INFO finished voice process and sentimental analysis
+2023-10-21 15:57:35,849 INFO Stream finished.
+2023-10-21 15:57:36,390 INFO VITS Synth Done, time used 0.54
+2023-10-21 15:57:36,399 INFO Sentiment Engine Infer: 0
+2023-10-21 15:57:36,402 INFO No environment configuration found.
+2023-10-21 15:57:36,402 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 15:57:37,289 INFO finished voice process and sentimental analysis
+2023-10-21 15:57:37,790 INFO Stream finished.
+2023-10-21 15:57:38,350 INFO VITS Synth Done, time used 0.56
+2023-10-21 15:57:38,390 INFO Sentiment Engine Infer: 0
+2023-10-21 15:57:38,394 INFO No environment configuration found.
+2023-10-21 15:57:38,394 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 15:57:39,281 INFO finished voice process and sentimental analysis
+2023-10-21 15:57:39,785 INFO Stream finished.
+2023-10-21 15:57:40,338 INFO VITS Synth Done, time used 0.55
+2023-10-21 15:57:40,346 INFO Sentiment Engine Infer: 0
+2023-10-21 15:57:40,349 INFO No environment configuration found.
+2023-10-21 15:57:40,350 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 15:57:41,237 INFO finished voice process and sentimental analysis
+2023-10-21 15:57:41,740 INFO Stream finished.
+2023-10-21 15:57:42,259 INFO VITS Synth Done, time used 0.51
+2023-10-21 15:57:42,267 INFO Sentiment Engine Infer: 0
+2023-10-21 15:57:42,270 INFO No environment configuration found.
+2023-10-21 15:57:42,270 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 15:57:43,157 INFO finished voice process and sentimental analysis
+2023-10-21 15:57:43,658 INFO Stream finished.
+2023-10-21 15:57:44,237 INFO VITS Synth Done, time used 0.57
+2023-10-21 15:57:44,248 INFO Sentiment Engine Infer: 0
+2023-10-21 15:57:44,252 INFO No environment configuration found.
+2023-10-21 15:57:44,252 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 15:57:45,140 INFO finished voice process and sentimental analysis
+2023-10-21 15:57:45,643 INFO Stream finished.
+2023-10-21 15:57:46,191 INFO VITS Synth Done, time used 0.54
+2023-10-21 15:57:46,202 INFO Sentiment Engine Infer: 0
+2023-10-21 15:57:46,205 INFO No environment configuration found.
+2023-10-21 15:57:46,206 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 15:57:47,094 INFO finished voice process and sentimental analysis
+2023-10-21 15:57:47,596 INFO Stream finished.
+2023-10-21 15:57:48,159 INFO VITS Synth Done, time used 0.56
+2023-10-21 15:57:48,168 INFO Sentiment Engine Infer: 0
+2023-10-21 15:57:48,172 INFO No environment configuration found.
+2023-10-21 15:57:48,172 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 15:57:49,528 INFO Error: <built-in function connect> returned a result with an exception set
+2023-10-21 15:57:50,029 INFO finished voice process and sentimental analysis
+2023-10-21 15:57:50,531 INFO Stream finished.
+2023-10-21 15:57:51,050 INFO VITS Synth Done, time used 0.52
+2023-10-21 15:57:51,058 INFO Sentiment Engine Infer: 0
+2023-10-21 15:57:51,061 INFO No environment configuration found.
+2023-10-21 15:57:51,062 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 15:57:51,951 INFO finished voice process and sentimental analysis
+2023-10-21 16:08:29,022 INFO Initializing Server...
+2023-10-21 16:08:29,022 INFO Initializing TTS Service for character_paimon...
+2023-10-21 16:08:29,412 INFO Loaded checkpoint 'TTS/models/paimon6k_390000.pth' (iteration 8864)
+2023-10-21 16:08:29,412 INFO Initializing Sentiment Engine...
+2023-10-21 16:08:30,069 INFO 140.114.41.84
+2023-10-21 16:08:30,083 INFO No environment configuration found.
+2023-10-21 16:08:30,084 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 16:08:33,615 INFO VITS Synth Done, time used 0.73
+2023-10-21 16:08:33,647 INFO Sentiment Engine Infer: 0
+2023-10-21 16:08:33,647 INFO No environment configuration found.
+2023-10-21 16:08:33,647 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 16:08:34,919 INFO finished voice process and sentimental analysis
+2023-10-21 16:08:35,422 INFO Stream finished.
+2023-10-21 16:08:35,787 INFO VITS Synth Done, time used 0.36
+2023-10-21 16:08:35,803 INFO Sentiment Engine Infer: 0
+2023-10-21 16:08:35,803 INFO No environment configuration found.
+2023-10-21 16:08:35,803 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 16:08:37,079 INFO finished voice process and sentimental analysis
+2023-10-21 16:08:37,582 INFO Stream finished.
+2023-10-21 16:08:37,990 INFO VITS Synth Done, time used 0.41
+2023-10-21 16:08:38,022 INFO Sentiment Engine Infer: 0
+2023-10-21 16:08:38,022 INFO No environment configuration found.
+2023-10-21 16:08:38,022 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 16:08:39,295 INFO finished voice process and sentimental analysis
+2023-10-21 16:08:39,798 INFO Stream finished.
+2023-10-21 16:08:40,209 INFO VITS Synth Done, time used 0.41
+2023-10-21 16:08:40,242 INFO Sentiment Engine Infer: 0
+2023-10-21 16:08:40,245 INFO No environment configuration found.
+2023-10-21 16:08:40,246 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 16:24:46,802 INFO Initializing Server...
+2023-10-21 16:24:46,804 INFO Initializing TTS Service for character_paimon...
+2023-10-21 16:24:47,194 INFO Loaded checkpoint 'TTS/models/paimon6k_390000.pth' (iteration 8864)
+2023-10-21 16:24:47,194 INFO Initializing Sentiment Engine...
+2023-10-21 16:24:48,178 INFO 140.114.41.84
+2023-10-21 16:24:48,178 INFO No environment configuration found.
+2023-10-21 16:24:48,178 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 16:24:54,997 INFO VITS Synth Done, time used 3.88
+2023-10-21 16:24:55,041 INFO Sentiment Engine Infer: 0
+2023-10-21 16:24:55,041 INFO No environment configuration found.
+2023-10-21 16:24:55,041 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 16:26:02,428 INFO Initializing Server...
+2023-10-21 16:26:02,444 INFO Initializing TTS Service for character_paimon...
+2023-10-21 16:26:02,834 INFO Loaded checkpoint 'TTS/models/paimon6k_390000.pth' (iteration 8864)
+2023-10-21 16:26:02,850 INFO Initializing Sentiment Engine...
+2023-10-21 16:26:03,584 INFO 140.114.41.84
+2023-10-21 16:26:03,584 INFO No environment configuration found.
+2023-10-21 16:26:03,584 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 16:26:10,291 INFO VITS Synth Done, time used 3.98
+2023-10-21 16:26:10,327 INFO Sentiment Engine Infer: 0
+2023-10-21 16:26:10,327 INFO No environment configuration found.
+2023-10-21 16:26:10,327 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 16:26:13,220 INFO finished voice process and sentimental analysis
+2023-10-21 16:26:13,723 INFO Stream finished.
+2023-10-21 16:26:17,209 INFO VITS Synth Done, time used 3.49
+2023-10-21 16:26:17,240 INFO Sentiment Engine Infer: 0
+2023-10-21 16:26:17,240 INFO No environment configuration found.
+2023-10-21 16:26:17,240 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 16:26:19,051 INFO finished voice process and sentimental analysis
+2023-10-21 16:26:19,554 INFO Stream finished.
+2023-10-21 16:49:03,678 INFO Initializing Server...
+2023-10-21 16:49:03,694 INFO Initializing TTS Service for character_paimon...
+2023-10-21 16:49:04,069 INFO Loaded checkpoint 'TTS/models/paimon6k_390000.pth' (iteration 8864)
+2023-10-21 16:49:04,069 INFO Initializing Sentiment Engine...
+2023-10-21 16:49:05,055 INFO 140.114.41.84
+2023-10-21 16:49:05,055 INFO No environment configuration found.
+2023-10-21 16:49:05,055 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 16:49:07,460 INFO (1, 123, '美國政府擴大禁止向中國出口半導體，輝達及AMD股價下跌。輝達受新規定影響嚴重，而AMD的北美客戶可能提供買點。英特爾或是新禁令最大受害者，因為其中國客戶占主要份額。', 0)
+2023-10-21 16:49:11,828 INFO VITS Synth Done, time used 3.96
+2023-10-21 16:49:11,881 INFO Sentiment Engine Infer: 0
+2023-10-21 16:49:11,881 INFO No environment configuration found.
+2023-10-21 16:49:11,881 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 16:49:13,960 INFO finished insertion
+2023-10-21 16:49:15,076 INFO finished voice process and sentimental analysis
+2023-10-21 16:49:15,579 INFO Stream finished.
+2023-10-21 16:49:19,071 INFO VITS Synth Done, time used 3.49
+2023-10-21 16:49:19,115 INFO Sentiment Engine Infer: 0
+2023-10-21 16:49:19,115 INFO No environment configuration found.
+2023-10-21 16:49:19,115 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 16:49:20,115 INFO finished insertion
+2023-10-21 16:49:21,234 INFO finished voice process and sentimental analysis
+2023-10-21 16:49:21,737 INFO Stream finished.
+2023-10-21 16:49:25,218 INFO VITS Synth Done, time used 3.48
+2023-10-21 16:49:25,241 INFO Sentiment Engine Infer: 0
+2023-10-21 16:49:25,241 INFO No environment configuration found.
+2023-10-21 16:49:25,241 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 16:49:26,240 INFO finished insertion
+2023-10-21 16:49:27,359 INFO finished voice process and sentimental analysis
+2023-10-21 16:49:27,863 INFO Stream finished.
+2023-10-21 16:50:51,655 INFO Initializing Server...
+2023-10-21 16:50:51,657 INFO Initializing TTS Service for character_paimon...
+2023-10-21 16:50:52,038 INFO Loaded checkpoint 'TTS/models/paimon6k_390000.pth' (iteration 8864)
+2023-10-21 16:50:52,038 INFO Initializing Sentiment Engine...
+2023-10-21 16:50:52,699 INFO 140.114.41.84
+2023-10-21 16:50:52,699 INFO No environment configuration found.
+2023-10-21 16:50:52,700 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 16:50:55,083 INFO (1, 123, '美國政府擴大禁止向中國出口半導體，輝達及AMD股價下跌。輝達受新規定影響嚴重，而AMD的北美客戶可能提供買點。英特爾或是新禁令最大受害者，因為其中國客戶占主要份額。', 0)
+2023-10-21 16:50:59,330 INFO VITS Synth Done, time used 3.84
+2023-10-21 16:50:59,366 INFO Sentiment Engine Infer: 0
+2023-10-21 16:50:59,366 INFO No environment configuration found.
+2023-10-21 16:50:59,366 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 16:51:01,209 INFO finished insertion
+2023-10-21 16:51:02,328 INFO finished voice process and sentimental analysis
+2023-10-21 16:51:02,831 INFO Stream finished.
+2023-10-21 16:51:06,316 INFO VITS Synth Done, time used 3.48
+2023-10-21 16:51:06,381 INFO Sentiment Engine Infer: 0
+2023-10-21 16:51:06,381 INFO No environment configuration found.
+2023-10-21 16:51:06,381 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 16:51:07,120 INFO finished insertion
+2023-10-21 16:51:08,231 INFO finished voice process and sentimental analysis
+2023-10-21 16:51:08,733 INFO Stream finished.
+2023-10-21 16:51:12,286 INFO VITS Synth Done, time used 3.55
+2023-10-21 16:51:12,334 INFO Sentiment Engine Infer: 0
+2023-10-21 16:51:12,334 INFO No environment configuration found.
+2023-10-21 16:51:12,334 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 16:51:13,069 INFO finished insertion
+2023-10-21 16:55:46,928 INFO Initializing Server...
+2023-10-21 16:55:46,928 INFO Initializing TTS Service for character_paimon...
+2023-10-21 16:55:47,327 INFO Loaded checkpoint 'TTS/models/paimon6k_390000.pth' (iteration 8864)
+2023-10-21 16:55:47,329 INFO Initializing Sentiment Engine...
+2023-10-21 16:55:48,366 INFO 140.114.41.84
+2023-10-21 16:55:48,366 INFO No environment configuration found.
+2023-10-21 16:55:48,366 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 16:55:50,694 INFO (1, 123, '美國政府擴大禁止向中國出口半導體，輝達及AMD股價下跌。輝達受新規定影響嚴重，而AMD的北美客戶可能提供買點。英特爾或是新禁令最大受害者，因為其中國客戶占主要份額。', 0)
+2023-10-21 16:55:54,955 INFO VITS Synth Done, time used 3.86
+2023-10-21 16:55:55,037 INFO Sentiment Engine Infer: 0
+2023-10-21 16:55:55,037 INFO No environment configuration found.
+2023-10-21 16:55:55,037 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 16:55:57,003 INFO finished insertion
+2023-10-21 16:55:57,902 INFO finished voice process and sentimental analysis
+2023-10-21 16:55:58,404 INFO Stream finished.
+2023-10-21 16:56:01,914 INFO VITS Synth Done, time used 3.51
+2023-10-21 16:56:01,944 INFO Sentiment Engine Infer: 0
+2023-10-21 16:56:01,959 INFO No environment configuration found.
+2023-10-21 16:56:01,959 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 16:56:02,865 INFO finished insertion
+2023-10-21 16:56:03,753 INFO finished voice process and sentimental analysis
+2023-10-21 16:56:04,255 INFO Stream finished.
+2023-10-21 16:56:07,862 INFO VITS Synth Done, time used 3.61
+2023-10-21 16:56:07,913 INFO Sentiment Engine Infer: 0
+2023-10-21 16:56:07,913 INFO No environment configuration found.
+2023-10-21 16:56:07,913 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 16:56:08,803 INFO finished insertion
+2023-10-21 16:56:09,700 INFO finished voice process and sentimental analysis
+2023-10-21 16:56:10,204 INFO Stream finished.
+2023-10-21 17:04:37,307 INFO Initializing Server...
+2023-10-21 17:04:37,309 INFO Initializing TTS Service for character_paimon...
+2023-10-21 17:04:37,694 INFO Loaded checkpoint 'TTS/models/paimon6k_390000.pth' (iteration 8864)
+2023-10-21 17:04:37,694 INFO Initializing Sentiment Engine...
+2023-10-21 17:04:38,344 INFO 140.114.41.84
+2023-10-21 17:04:38,345 INFO No environment configuration found.
+2023-10-21 17:04:38,347 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 17:04:40,600 INFO (2, 123, '飲料店員呼籲客人使用環保杯時，不要害羞，直接告知以節省時間和避免浪費。不要隱藏環保杯，也請客人不要過度要求杯子容量，口徑太小，或不洗杯子要求店員清潔。', 0)
+2023-10-21 17:04:44,734 INFO VITS Synth Done, time used 3.76
+2023-10-21 17:04:44,772 INFO Sentiment Engine Infer: 0
+2023-10-21 17:04:44,788 INFO No environment configuration found.
+2023-10-21 17:04:44,788 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 17:04:46,722 INFO finished insertion
+2023-10-21 17:04:47,616 INFO finished voice process and sentimental analysis
+2023-10-21 17:04:48,117 INFO Stream finished.
+2023-10-21 17:04:51,457 INFO VITS Synth Done, time used 3.34
+2023-10-21 17:04:51,490 INFO Sentiment Engine Infer: 0
+2023-10-21 17:04:51,506 INFO No environment configuration found.
+2023-10-21 17:04:51,506 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 17:04:52,473 INFO finished insertion
+2023-10-21 17:04:53,367 INFO finished voice process and sentimental analysis
+2023-10-21 17:04:53,868 INFO Stream finished.
+2023-10-21 17:04:57,051 INFO VITS Synth Done, time used 3.18
+2023-10-21 17:04:57,082 INFO Sentiment Engine Infer: 0
+2023-10-21 17:04:57,084 INFO No environment configuration found.
+2023-10-21 17:04:57,084 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 17:04:57,959 INFO finished insertion
+2023-10-21 17:04:58,846 INFO finished voice process and sentimental analysis
+2023-10-21 17:04:59,349 INFO Stream finished.
+2023-10-21 17:05:02,737 INFO VITS Synth Done, time used 3.39
+2023-10-21 17:05:02,782 INFO Sentiment Engine Infer: 0
+2023-10-21 17:05:02,787 INFO No environment configuration found.
+2023-10-21 17:05:02,787 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 17:05:03,663 INFO finished insertion
+2023-10-21 17:05:04,548 INFO finished voice process and sentimental analysis
+2023-10-21 17:05:05,051 INFO Stream finished.
+2023-10-21 17:51:36,115 INFO Initializing Server...
+2023-10-21 17:51:36,115 INFO Initializing TTS Service for character_paimon...
+2023-10-21 17:51:36,522 INFO Loaded checkpoint 'TTS/models/paimon6k_390000.pth' (iteration 8864)
+2023-10-21 17:51:36,522 INFO Initializing Sentiment Engine...
+2023-10-21 17:51:37,272 INFO No environment configuration found.
+2023-10-21 17:51:37,288 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 17:51:39,763 INFO (1, 123, '美國政府擴大禁止向中國出口半導體，輝達及AMD股價下跌。輝達受新規定影響嚴重，而AMD的北美客戶可能提供買點。英特爾或是新禁令最大受害者，因為其中國客戶占主要份額。', 0)
+2023-10-21 17:51:44,273 INFO VITS Synth Done, time used 3.91
+2023-10-21 17:51:44,312 INFO Sentiment Engine Infer: 0
+2023-10-21 17:51:44,315 INFO No environment configuration found.
+2023-10-21 17:51:44,316 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 17:51:46,757 INFO finished insertion
+2023-10-21 17:51:47,663 INFO finished voice process and sentimental analysis
+2023-10-21 17:51:48,166 INFO Stream finished.
+2023-10-21 17:51:48,168 INFO No environment configuration found.
+2023-10-21 17:51:48,170 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 17:51:48,577 INFO (2, 123, '飲料店員呼籲客人使用環保杯時，不要害羞，直接告知以節省時間和避免浪費。不要隱藏環保杯，也請客人不要過度要求杯子容量，口徑太小，或不洗杯子要求店員清潔。', 0)
+2023-10-21 17:51:52,366 INFO VITS Synth Done, time used 3.18
+2023-10-21 17:51:52,411 INFO Sentiment Engine Infer: 0
+2023-10-21 17:51:52,415 INFO No environment configuration found.
+2023-10-21 17:51:52,415 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 17:51:53,657 INFO finished insertion
+2023-10-21 17:51:54,562 INFO finished voice process and sentimental analysis
+2023-10-21 17:51:55,065 INFO Stream finished.
+2023-10-21 17:51:55,067 INFO No environment configuration found.
+2023-10-21 17:51:55,069 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 17:51:56,080 ERROR cannot access local variable 'sentence' where it is not associated with a value
+2023-10-21 17:51:56,084 ERROR Traceback (most recent call last):
+  File "C:\Users\NTHUILST\Downloads\Digital_Life_Server-20231020T154914Z-001\Digital_Life_Server\SocketServer2.py", line 103, in listen
+    sentence = s.get_sentence(id_count)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\NTHUILST\Downloads\Digital_Life_Server-20231020T154914Z-001\Digital_Life_Server\SocketServer2.py", line 217, in get_sentence
+    return sentence
+           ^^^^^^^^
+UnboundLocalError: cannot access local variable 'sentence' where it is not associated with a value
+
+2023-10-21 17:52:59,965 INFO Initializing Server...
+2023-10-21 17:52:59,965 INFO Initializing TTS Service for character_paimon...
+2023-10-21 17:53:00,366 INFO Loaded checkpoint 'TTS/models/paimon6k_390000.pth' (iteration 8864)
+2023-10-21 17:53:00,366 INFO Initializing Sentiment Engine...
+2023-10-21 17:53:01,053 INFO No environment configuration found.
+2023-10-21 17:53:01,053 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 17:53:03,178 INFO (1, 123, '美國政府擴大禁止向中國出口半導體，輝達及AMD股價下跌。輝達受新規定影響嚴重，而AMD的北美客戶可能提供買點。英特爾或是新禁令最大受害者，因為其中國客戶占主要份額。', 0)
+2023-10-21 17:53:07,569 INFO VITS Synth Done, time used 3.83
+2023-10-21 17:53:07,631 INFO Sentiment Engine Infer: 0
+2023-10-21 17:53:07,631 INFO No environment configuration found.
+2023-10-21 17:53:07,631 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 17:53:09,530 INFO finished insertion
+2023-10-21 17:53:10,406 INFO finished voice process and sentimental analysis
+2023-10-21 17:53:10,908 INFO Stream finished.
+2023-10-21 17:53:10,911 INFO No environment configuration found.
+2023-10-21 17:53:10,913 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 17:53:11,289 INFO (2, 123, '飲料店員呼籲客人使用環保杯時，不要害羞，直接告知以節省時間和避免浪費。不要隱藏環保杯，也請客人不要過度要求杯子容量，口徑太小，或不洗杯子要求店員清潔。', 0)
+2023-10-21 17:53:15,096 INFO VITS Synth Done, time used 3.25
+2023-10-21 17:53:15,137 INFO Sentiment Engine Infer: 0
+2023-10-21 17:53:15,137 INFO No environment configuration found.
+2023-10-21 17:53:15,138 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 17:53:16,005 INFO finished insertion
+2023-10-21 17:53:16,879 INFO finished voice process and sentimental analysis
+2023-10-21 17:53:17,382 INFO Stream finished.
+2023-10-21 17:53:17,385 INFO No environment configuration found.
+2023-10-21 17:53:17,386 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 17:53:18,320 ERROR 'NoneType' object is not subscriptable
+2023-10-21 17:53:18,323 ERROR Traceback (most recent call last):
+  File "C:\Users\NTHUILST\Downloads\Digital_Life_Server-20231020T154914Z-001\Digital_Life_Server\SocketServer2.py", line 104, in listen
+    id = sentence[0]
+         ~~~~~~~~^^^
+TypeError: 'NoneType' object is not subscriptable
+
+2023-10-21 17:55:19,506 INFO Initializing Server...
+2023-10-21 17:55:19,519 INFO Initializing TTS Service for character_paimon...
+2023-10-21 17:55:19,913 INFO Loaded checkpoint 'TTS/models/paimon6k_390000.pth' (iteration 8864)
+2023-10-21 17:55:19,913 INFO Initializing Sentiment Engine...
+2023-10-21 17:55:20,913 INFO No environment configuration found.
+2023-10-21 17:55:20,921 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 17:55:23,248 INFO (1, 123, '美國政府擴大禁止向中國出口半導體，輝達及AMD股價下跌。輝達受新規定影響嚴重，而AMD的北美客戶可能提供買點。英特爾或是新禁令最大受害者，因為其中國客戶占主要份額。', 0)
+2023-10-21 17:55:27,647 INFO VITS Synth Done, time used 3.82
+2023-10-21 17:55:27,694 INFO Sentiment Engine Infer: 0
+2023-10-21 17:55:27,694 INFO No environment configuration found.
+2023-10-21 17:55:27,694 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 17:55:29,640 INFO finished insertion
+2023-10-21 17:55:30,522 INFO finished voice process and sentimental analysis
+2023-10-21 17:55:31,023 INFO Stream finished.
+2023-10-21 17:55:31,026 INFO No environment configuration found.
+2023-10-21 17:55:31,027 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 17:55:31,414 INFO (2, 123, '飲料店員呼籲客人使用環保杯時，不要害羞，直接告知以節省時間和避免浪費。不要隱藏環保杯，也請客人不要過度要求杯子容量，口徑太小，或不洗杯子要求店員清潔。', 0)
+2023-10-21 17:55:35,166 INFO VITS Synth Done, time used 3.18
+2023-10-21 17:55:35,210 INFO Sentiment Engine Infer: 0
+2023-10-21 17:55:35,214 INFO No environment configuration found.
+2023-10-21 17:55:35,214 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 17:55:36,097 INFO finished insertion
+2023-10-21 17:55:36,979 INFO finished voice process and sentimental analysis
+2023-10-21 17:55:37,480 INFO Stream finished.
+2023-10-21 17:55:37,483 INFO No environment configuration found.
+2023-10-21 17:55:37,485 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 17:55:38,441 INFO No environment configuration found.
+2023-10-21 17:55:38,444 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 17:55:39,401 INFO No environment configuration found.
+2023-10-21 17:55:39,404 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 17:55:40,362 INFO No environment configuration found.
+2023-10-21 17:55:40,365 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 17:55:41,327 INFO No environment configuration found.
+2023-10-21 17:55:41,330 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 17:55:42,287 INFO No environment configuration found.
+2023-10-21 17:55:42,287 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 17:55:43,243 INFO No environment configuration found.
+2023-10-21 17:55:43,246 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 17:55:44,203 INFO No environment configuration found.
+2023-10-21 17:55:44,206 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 17:55:45,163 INFO No environment configuration found.
+2023-10-21 17:55:45,165 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 17:55:46,123 INFO No environment configuration found.
+2023-10-21 17:55:46,126 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 17:55:47,083 INFO No environment configuration found.
+2023-10-21 17:55:47,086 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 17:55:48,045 INFO No environment configuration found.
+2023-10-21 17:55:48,048 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 17:55:49,005 INFO No environment configuration found.
+2023-10-21 17:55:49,008 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 17:55:49,967 INFO No environment configuration found.
+2023-10-21 17:55:49,970 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 17:55:50,913 INFO No environment configuration found.
+2023-10-21 17:55:50,928 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 17:55:51,882 INFO No environment configuration found.
+2023-10-21 17:55:51,886 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 17:55:52,834 INFO No environment configuration found.
+2023-10-21 17:55:52,834 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 17:55:53,803 INFO No environment configuration found.
+2023-10-21 17:55:53,803 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 17:55:54,756 INFO No environment configuration found.
+2023-10-21 17:55:54,756 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 17:55:55,725 INFO No environment configuration found.
+2023-10-21 17:55:55,725 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 17:55:56,678 INFO No environment configuration found.
+2023-10-21 17:55:56,678 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 17:55:57,632 INFO No environment configuration found.
+2023-10-21 17:55:57,647 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 17:55:58,600 INFO No environment configuration found.
+2023-10-21 17:55:58,600 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 17:55:59,569 INFO No environment configuration found.
+2023-10-21 17:55:59,571 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 17:56:00,522 INFO No environment configuration found.
+2023-10-21 17:56:00,522 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 17:56:01,476 INFO No environment configuration found.
+2023-10-21 17:56:01,491 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 17:56:02,450 INFO No environment configuration found.
+2023-10-21 17:56:02,451 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 17:56:03,397 INFO No environment configuration found.
+2023-10-21 17:56:03,397 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 17:56:04,741 INFO Error: <built-in function connect> returned a result with an exception set
+2023-10-21 17:56:04,741 INFO No environment configuration found.
+2023-10-21 17:56:04,741 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 17:56:05,694 INFO No environment configuration found.
+2023-10-21 17:56:05,709 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 17:56:06,663 INFO No environment configuration found.
+2023-10-21 17:56:06,663 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 17:56:07,616 INFO No environment configuration found.
+2023-10-21 17:56:07,631 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 17:56:08,590 INFO No environment configuration found.
+2023-10-21 17:56:08,592 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 17:56:09,538 INFO No environment configuration found.
+2023-10-21 17:56:09,553 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 17:56:10,895 INFO Error: <built-in function connect> returned a result with an exception set
+2023-10-21 17:56:10,898 INFO No environment configuration found.
+2023-10-21 17:56:10,900 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 17:56:11,850 INFO No environment configuration found.
+2023-10-21 17:56:12,960 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 17:56:13,913 INFO No environment configuration found.
+2023-10-21 17:56:13,913 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 17:56:14,866 INFO No environment configuration found.
+2023-10-21 17:56:14,881 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 17:56:15,834 INFO No environment configuration found.
+2023-10-21 17:56:15,834 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 17:59:38,272 INFO Initializing Server...
+2023-10-21 17:59:38,272 INFO Initializing TTS Service for character_paimon...
+2023-10-21 17:59:38,662 INFO Loaded checkpoint 'TTS/models/paimon6k_390000.pth' (iteration 8864)
+2023-10-21 17:59:38,662 INFO Initializing Sentiment Engine...
+2023-10-21 17:59:39,335 INFO No environment configuration found.
+2023-10-21 17:59:39,335 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 17:59:41,600 INFO (1, 123, '美國政府擴大禁止向中國出口半導體，輝達及AMD股價下跌。輝達受新規定影響嚴重，而AMD的北美客戶可能提供買點。英特爾或是新禁令最大受害者，因為其中國客戶占主要份額。', 0)
+2023-10-21 17:59:46,225 INFO VITS Synth Done, time used 4.03
+2023-10-21 17:59:46,287 INFO Sentiment Engine Infer: 0
+2023-10-21 17:59:46,287 INFO No environment configuration found.
+2023-10-21 17:59:46,287 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 17:59:48,276 INFO finished insertion
+2023-10-21 17:59:49,168 INFO finished voice process and sentimental analysis
+2023-10-21 17:59:49,671 INFO Stream finished.
+2023-10-21 17:59:49,673 INFO No environment configuration found.
+2023-10-21 17:59:49,675 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 17:59:50,068 INFO (2, 123, '飲料店員呼籲客人使用環保杯時，不要害羞，直接告知以節省時間和避免浪費。不要隱藏環保杯，也請客人不要過度要求杯子容量，口徑太小，或不洗杯子要求店員清潔。', 0)
+2023-10-21 17:59:53,866 INFO VITS Synth Done, time used 3.21
+2023-10-21 17:59:53,899 INFO Sentiment Engine Infer: 0
+2023-10-21 17:59:53,902 INFO No environment configuration found.
+2023-10-21 17:59:53,903 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 17:59:54,801 INFO finished insertion
+2023-10-21 17:59:55,694 INFO finished voice process and sentimental analysis
+2023-10-21 17:59:56,197 INFO Stream finished.
+2023-10-21 17:59:56,198 INFO No environment configuration found.
+2023-10-21 17:59:56,198 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 17:59:57,176 INFO No environment configuration found.
+2023-10-21 17:59:57,179 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 17:59:58,158 INFO No environment configuration found.
+2023-10-21 17:59:58,158 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 17:59:59,136 INFO No environment configuration found.
+2023-10-21 17:59:59,139 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 18:00:00,119 INFO No environment configuration found.
+2023-10-21 18:00:00,121 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 18:00:01,110 INFO No environment configuration found.
+2023-10-21 18:00:01,112 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 18:00:02,090 INFO No environment configuration found.
+2023-10-21 18:00:02,093 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 18:00:03,071 INFO No environment configuration found.
+2023-10-21 18:00:03,074 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 18:00:04,052 INFO No environment configuration found.
+2023-10-21 18:00:04,054 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 18:00:22,659 INFO Initializing Server...
+2023-10-21 18:00:22,659 INFO Initializing TTS Service for character_paimon...
+2023-10-21 18:00:23,069 INFO Loaded checkpoint 'TTS/models/paimon6k_390000.pth' (iteration 8864)
+2023-10-21 18:00:23,069 INFO Initializing Sentiment Engine...
+2023-10-21 18:00:23,694 INFO No environment configuration found.
+2023-10-21 18:00:23,694 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 18:00:25,918 INFO (1, 123, '美國政府擴大禁止向中國出口半導體，輝達及AMD股價下跌。輝達受新規定影響嚴重，而AMD的北美客戶可能提供買點。英特爾或是新禁令最大受害者，因為其中國客戶占主要份額。', 0)
+2023-10-21 18:00:30,334 INFO VITS Synth Done, time used 3.86
+2023-10-21 18:00:30,412 INFO Sentiment Engine Infer: 0
+2023-10-21 18:00:30,412 INFO No environment configuration found.
+2023-10-21 18:00:30,412 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 18:00:32,313 INFO finished insertion
+2023-10-21 18:00:33,185 INFO finished voice process and sentimental analysis
+2023-10-21 18:00:33,689 INFO Stream finished.
+2023-10-21 18:00:33,691 INFO No environment configuration found.
+2023-10-21 18:00:33,692 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 18:00:34,066 INFO (2, 123, '飲料店員呼籲客人使用環保杯時，不要害羞，直接告知以節省時間和避免浪費。不要隱藏環保杯，也請客人不要過度要求杯子容量，口徑太小，或不洗杯子要求店員清潔。', 0)
+2023-10-21 18:00:37,823 INFO VITS Synth Done, time used 3.20
+2023-10-21 18:00:37,864 INFO Sentiment Engine Infer: 0
+2023-10-21 18:00:37,870 INFO No environment configuration found.
+2023-10-21 18:00:37,870 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 18:00:38,727 INFO finished insertion
+2023-10-21 18:00:39,601 INFO finished voice process and sentimental analysis
+2023-10-21 18:00:40,105 INFO Stream finished.
+2023-10-21 18:00:40,108 INFO No environment configuration found.
+2023-10-21 18:00:40,109 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 18:00:41,037 INFO No environment configuration found.
+2023-10-21 18:00:41,040 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 18:00:41,967 INFO No environment configuration found.
+2023-10-21 18:00:41,968 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 18:00:42,896 INFO No environment configuration found.
+2023-10-21 18:00:42,899 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 18:00:43,827 INFO No environment configuration found.
+2023-10-21 18:00:43,830 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 18:00:44,758 INFO No environment configuration found.
+2023-10-21 18:00:44,759 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 18:00:45,687 INFO No environment configuration found.
+2023-10-21 18:00:45,690 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 18:00:46,618 INFO No environment configuration found.
+2023-10-21 18:00:46,618 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 18:00:47,542 INFO No environment configuration found.
+2023-10-21 18:00:47,542 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 18:00:48,467 INFO No environment configuration found.
+2023-10-21 18:00:48,467 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 18:00:49,392 INFO No environment configuration found.
+2023-10-21 18:00:49,392 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 18:00:50,319 INFO No environment configuration found.
+2023-10-21 18:00:50,322 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 18:00:51,250 INFO No environment configuration found.
+2023-10-21 18:00:51,250 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 18:00:52,176 INFO No environment configuration found.
+2023-10-21 18:00:52,178 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 18:00:53,100 INFO No environment configuration found.
+2023-10-21 18:00:53,100 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 18:00:54,022 INFO No environment configuration found.
+2023-10-21 18:00:54,022 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 18:00:54,959 INFO No environment configuration found.
+2023-10-21 18:00:54,959 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 18:00:55,882 INFO No environment configuration found.
+2023-10-21 18:00:55,882 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 18:00:56,819 INFO No environment configuration found.
+2023-10-21 18:00:56,819 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 18:00:57,741 INFO No environment configuration found.
+2023-10-21 18:00:57,741 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 18:00:58,680 INFO No environment configuration found.
+2023-10-21 18:00:58,683 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 18:00:59,600 INFO No environment configuration found.
+2023-10-21 18:00:59,600 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 18:01:00,538 INFO No environment configuration found.
+2023-10-21 18:01:00,538 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 18:01:01,469 INFO No environment configuration found.
+2023-10-21 18:01:01,472 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 18:01:02,397 INFO No environment configuration found.
+2023-10-21 18:01:02,397 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 18:01:03,325 INFO No environment configuration found.
+2023-10-21 18:01:03,335 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 18:01:04,256 INFO No environment configuration found.
+2023-10-21 18:01:04,256 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 18:01:05,178 INFO No environment configuration found.
+2023-10-21 18:01:05,178 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 18:01:06,116 INFO No environment configuration found.
+2023-10-21 18:01:06,116 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 18:01:07,044 INFO No environment configuration found.
+2023-10-21 18:01:07,044 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 18:01:07,972 INFO No environment configuration found.
+2023-10-21 18:01:07,975 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 18:01:08,897 INFO No environment configuration found.
+2023-10-21 18:01:08,897 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 18:01:09,834 INFO No environment configuration found.
+2023-10-21 18:01:09,834 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 18:01:10,756 INFO No environment configuration found.
+2023-10-21 18:01:10,756 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 18:01:11,688 INFO No environment configuration found.
+2023-10-21 18:01:11,691 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 18:01:12,620 INFO No environment configuration found.
+2023-10-21 18:01:12,623 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 18:01:13,538 INFO No environment configuration found.
+2023-10-21 18:01:13,553 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 18:01:14,471 INFO No environment configuration found.
+2023-10-21 18:01:14,471 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 18:01:15,397 INFO No environment configuration found.
+2023-10-21 18:01:15,397 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 18:01:16,335 INFO No environment configuration found.
+2023-10-21 18:01:16,335 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 18:01:17,268 INFO No environment configuration found.
+2023-10-21 18:01:17,269 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 18:01:18,194 INFO No environment configuration found.
+2023-10-21 18:01:18,194 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 18:01:19,115 INFO No environment configuration found.
+2023-10-21 18:01:19,115 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 18:01:19,491 INFO (3, 123, '哈囉。', 0)
+2023-10-21 18:01:20,584 INFO VITS Synth Done, time used 0.55
+2023-10-21 18:01:20,662 INFO Sentiment Engine Infer: 0
+2023-10-21 18:01:20,678 INFO No environment configuration found.
+2023-10-21 18:01:20,678 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 18:01:21,440 INFO finished insertion
+2023-10-21 18:01:22,311 INFO finished voice process and sentimental analysis
+2023-10-21 18:01:22,812 INFO Stream finished.
+2023-10-21 18:01:22,813 INFO No environment configuration found.
+2023-10-21 18:01:22,814 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 18:01:23,740 INFO No environment configuration found.
+2023-10-21 18:01:23,743 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 18:01:24,670 INFO No environment configuration found.
+2023-10-21 18:01:24,673 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 18:01:25,601 INFO No environment configuration found.
+2023-10-21 18:01:25,603 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 18:01:26,531 INFO No environment configuration found.
+2023-10-21 18:01:26,531 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 18:01:27,457 INFO No environment configuration found.
+2023-10-21 18:01:27,458 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 18:01:28,385 INFO No environment configuration found.
+2023-10-21 18:01:28,387 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 18:01:29,315 INFO No environment configuration found.
+2023-10-21 18:01:29,315 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 18:01:30,243 INFO No environment configuration found.
+2023-10-21 18:01:30,245 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 18:01:31,172 INFO No environment configuration found.
+2023-10-21 18:01:31,175 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 18:01:32,109 INFO No environment configuration found.
+2023-10-21 18:01:32,112 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 18:01:33,041 INFO No environment configuration found.
+2023-10-21 18:01:33,042 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 18:01:33,969 INFO No environment configuration found.
+2023-10-21 18:01:33,970 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 18:01:34,897 INFO No environment configuration found.
+2023-10-21 18:01:34,900 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 18:05:07,772 INFO Initializing Server...
+2023-10-21 18:05:07,774 INFO Initializing TTS Service for character_paimon...
+2023-10-21 18:05:08,147 INFO Loaded checkpoint 'TTS/models/paimon6k_390000.pth' (iteration 8864)
+2023-10-21 18:05:08,147 INFO Initializing Sentiment Engine...
+2023-10-21 18:05:08,803 INFO No environment configuration found.
+2023-10-21 18:05:08,803 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 18:05:11,085 INFO (1, 123, '美國政府擴大禁止向中國出口半導體，輝達及AMD股價下跌。輝達受新規定影響嚴重，而AMD的北美客戶可能提供買點。英特爾或是新禁令最大受害者，因為其中國客戶占主要份額。', 0)
+2023-10-21 18:05:15,569 INFO VITS Synth Done, time used 3.90
+2023-10-21 18:05:15,631 INFO Sentiment Engine Infer: 0
+2023-10-21 18:05:15,631 INFO No environment configuration found.
+2023-10-21 18:05:15,631 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 18:05:17,619 INFO finished insertion
+2023-10-21 18:05:18,511 INFO finished voice process and sentimental analysis
+2023-10-21 18:05:19,012 INFO Stream finished.
+2023-10-21 18:05:19,015 INFO No environment configuration found.
+2023-10-21 18:05:19,016 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 18:05:19,431 INFO (2, 123, '飲料店員呼籲客人使用環保杯時，不要害羞，直接告知以節省時間和避免浪費。不要隱藏環保杯，也請客人不要過度要求杯子容量，口徑太小，或不洗杯子要求店員清潔。', 0)
+2023-10-21 18:05:23,157 INFO VITS Synth Done, time used 3.14
+2023-10-21 18:05:23,183 INFO Sentiment Engine Infer: 0
+2023-10-21 18:05:23,188 INFO No environment configuration found.
+2023-10-21 18:05:23,188 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 18:05:24,085 INFO finished insertion
+2023-10-21 18:05:24,975 INFO finished voice process and sentimental analysis
+2023-10-21 18:05:25,478 INFO Stream finished.
+2023-10-21 18:05:25,480 INFO No environment configuration found.
+2023-10-21 18:05:25,482 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 18:05:25,875 INFO (3, 123, '哈囉。', 0)
+2023-10-21 18:05:26,750 INFO VITS Synth Done, time used 0.29
+2023-10-21 18:05:26,762 INFO Sentiment Engine Infer: 0
+2023-10-21 18:05:26,766 INFO No environment configuration found.
+2023-10-21 18:05:26,766 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 18:05:27,561 INFO finished insertion
+2023-10-21 18:05:28,453 INFO finished voice process and sentimental analysis
+2023-10-21 18:05:28,957 INFO Stream finished.
+2023-10-21 18:05:28,960 INFO No environment configuration found.
+2023-10-21 18:05:28,961 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 18:05:29,355 INFO (4, 123, '我好餓。', 0)
+2023-10-21 18:05:30,284 INFO VITS Synth Done, time used 0.34
+2023-10-21 18:05:30,293 INFO Sentiment Engine Infer: 0
+2023-10-21 18:05:30,296 INFO No environment configuration found.
+2023-10-21 18:05:30,296 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 18:05:31,087 INFO finished insertion
+2023-10-21 18:05:31,979 INFO finished voice process and sentimental analysis
+2023-10-21 18:05:32,482 INFO Stream finished.
+2023-10-21 18:05:32,482 INFO No environment configuration found.
+2023-10-21 18:05:32,482 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 18:05:33,457 INFO No environment configuration found.
+2023-10-21 18:05:33,461 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 18:05:34,438 INFO No environment configuration found.
+2023-10-21 18:05:34,440 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 18:05:35,416 INFO No environment configuration found.
+2023-10-21 18:05:35,419 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 18:05:36,394 INFO No environment configuration found.
+2023-10-21 18:05:36,397 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 18:05:37,373 INFO No environment configuration found.
+2023-10-21 18:05:37,376 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 18:05:38,352 INFO No environment configuration found.
+2023-10-21 18:05:38,355 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 18:05:39,331 INFO No environment configuration found.
+2023-10-21 18:05:39,334 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 18:05:40,311 INFO No environment configuration found.
+2023-10-21 18:05:40,314 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 18:05:41,289 INFO No environment configuration found.
+2023-10-21 18:05:41,292 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 18:05:42,271 INFO No environment configuration found.
+2023-10-21 18:05:42,272 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 21:28:56,528 INFO Initializing Server...
+2023-10-21 21:28:56,528 INFO Initializing TTS Service for character_paimon...
+2023-10-21 21:28:56,969 INFO Loaded checkpoint 'TTS/models/paimon6k_390000.pth' (iteration 8864)
+2023-10-21 21:28:56,969 INFO Initializing Sentiment Engine...
+2023-10-21 21:28:58,286 INFO No environment configuration found.
+2023-10-21 21:28:58,287 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 21:29:00,673 INFO (1, 123, '美國政府擴大禁止向中國出口半導體，輝達及AMD股價下跌。輝達受新規定影響嚴重，而AMD的北美客戶可能提供買點。英特爾或是新禁令最大受害者，因為其中國客戶占主要份額。', 0)
+2023-10-21 21:29:05,143 INFO VITS Synth Done, time used 3.86
+2023-10-21 21:29:05,204 INFO Sentiment Engine Infer: 0
+2023-10-21 21:29:05,204 INFO No environment configuration found.
+2023-10-21 21:29:05,204 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 21:29:07,264 INFO finished insertion
+2023-10-21 21:29:08,169 INFO finished voice process and sentimental analysis
+2023-10-21 21:29:08,670 INFO Stream finished.
+2023-10-21 21:29:08,670 INFO No environment configuration found.
+2023-10-21 21:29:08,670 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 21:29:09,063 INFO (2, 123, '飲料店員呼籲客人使用環保杯時，不要害羞，直接告知以節省時間和避免浪費。不要隱藏環保杯，也請客人不要過度要求杯子容量，口徑太小，或不洗杯子要求店員清潔。', 0)
+2023-10-21 21:29:12,983 INFO VITS Synth Done, time used 3.31
+2023-10-21 21:29:13,032 INFO Sentiment Engine Infer: 0
+2023-10-21 21:29:13,032 INFO No environment configuration found.
+2023-10-21 21:29:13,032 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 21:29:13,960 INFO finished insertion
+2023-10-21 21:29:14,868 INFO finished voice process and sentimental analysis
+2023-10-21 21:29:15,369 INFO Stream finished.
+2023-10-21 21:29:15,369 INFO No environment configuration found.
+2023-10-21 21:29:15,369 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 21:29:15,766 INFO (3, 123, '哈囉。', 0)
+2023-10-21 21:29:16,668 INFO VITS Synth Done, time used 0.29
+2023-10-21 21:29:16,668 INFO Sentiment Engine Infer: 0
+2023-10-21 21:29:16,684 INFO No environment configuration found.
+2023-10-21 21:29:16,684 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 21:29:17,501 INFO finished insertion
+2023-10-21 21:29:18,412 INFO finished voice process and sentimental analysis
+2023-10-21 21:29:18,913 INFO Stream finished.
+2023-10-21 21:29:18,913 INFO No environment configuration found.
+2023-10-21 21:29:18,913 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 21:29:19,313 INFO (4, 123, '我好餓。', 0)
+2023-10-21 21:29:20,251 INFO VITS Synth Done, time used 0.32
+2023-10-21 21:29:20,266 INFO Sentiment Engine Infer: 0
+2023-10-21 21:29:20,266 INFO No environment configuration found.
+2023-10-21 21:29:20,266 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 21:29:21,080 INFO finished insertion
+2023-10-21 21:29:21,999 INFO finished voice process and sentimental analysis
+2023-10-21 21:29:22,500 INFO Stream finished.
+2023-10-21 21:29:22,500 INFO No environment configuration found.
+2023-10-21 21:29:22,501 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 21:29:22,892 INFO (5, 1, '哈囉你好嗎', 1)
+2023-10-21 21:29:23,844 INFO VITS Synth Done, time used 0.34
+2023-10-21 21:29:23,860 INFO Sentiment Engine Infer: 0
+2023-10-21 21:29:23,860 INFO No environment configuration found.
+2023-10-21 21:29:23,860 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 21:29:24,685 INFO finished insertion
+2023-10-21 21:29:25,595 INFO finished voice process and sentimental analysis
+2023-10-21 21:29:26,096 INFO Stream finished.
+2023-10-21 21:29:26,096 INFO No environment configuration found.
+2023-10-21 21:29:26,097 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 21:29:26,503 INFO (6, 1, '哈囉你好嗎=', 1)
+2023-10-21 21:29:27,470 INFO VITS Synth Done, time used 0.36
+2023-10-21 21:29:27,501 INFO Sentiment Engine Infer: 0
+2023-10-21 21:29:27,501 INFO No environment configuration found.
+2023-10-21 21:29:27,501 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 21:29:28,335 INFO finished insertion
+2023-10-21 21:29:29,241 INFO finished voice process and sentimental analysis
+2023-10-21 21:29:29,742 INFO Stream finished.
+2023-10-21 21:29:29,743 INFO No environment configuration found.
+2023-10-21 21:29:29,743 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 21:29:30,755 INFO No environment configuration found.
+2023-10-21 21:29:30,756 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 21:29:31,767 INFO No environment configuration found.
+2023-10-21 21:29:31,769 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 21:29:32,782 INFO No environment configuration found.
+2023-10-21 21:29:32,782 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 21:29:33,782 INFO No environment configuration found.
+2023-10-21 21:29:33,782 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 21:29:34,798 INFO No environment configuration found.
+2023-10-21 21:29:34,798 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 21:29:35,813 INFO No environment configuration found.
+2023-10-21 21:29:35,813 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 21:29:36,829 INFO No environment configuration found.
+2023-10-21 21:29:36,837 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 21:29:37,849 INFO No environment configuration found.
+2023-10-21 21:29:37,850 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 21:29:38,862 INFO No environment configuration found.
+2023-10-21 21:29:38,863 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 21:29:39,876 INFO No environment configuration found.
+2023-10-21 21:29:39,877 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 21:29:40,876 INFO No environment configuration found.
+2023-10-21 21:29:40,876 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 21:29:41,901 INFO No environment configuration found.
+2023-10-21 21:29:41,902 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 21:29:42,907 INFO No environment configuration found.
+2023-10-21 21:29:42,907 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 21:29:43,931 INFO No environment configuration found.
+2023-10-21 21:29:43,932 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 21:29:44,938 INFO No environment configuration found.
+2023-10-21 21:29:44,938 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 21:29:45,957 INFO No environment configuration found.
+2023-10-21 21:29:45,958 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 21:29:46,970 INFO No environment configuration found.
+2023-10-21 21:29:46,970 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 21:29:47,976 INFO No environment configuration found.
+2023-10-21 21:29:47,976 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 21:29:48,995 INFO No environment configuration found.
+2023-10-21 21:29:48,996 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 21:29:50,008 INFO No environment configuration found.
+2023-10-21 21:29:50,009 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 21:29:51,016 INFO No environment configuration found.
+2023-10-21 21:29:51,022 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 21:29:52,032 INFO No environment configuration found.
+2023-10-21 21:29:52,032 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 21:29:53,032 INFO No environment configuration found.
+2023-10-21 21:29:53,048 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 21:29:54,048 INFO No environment configuration found.
+2023-10-21 21:29:54,048 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 21:29:55,063 INFO No environment configuration found.
+2023-10-21 21:29:55,063 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 21:29:56,079 INFO No environment configuration found.
+2023-10-21 21:29:56,079 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 21:29:57,095 INFO No environment configuration found.
+2023-10-21 21:29:57,095 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 21:29:58,114 INFO No environment configuration found.
+2023-10-21 21:29:58,115 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 21:29:59,126 INFO No environment configuration found.
+2023-10-21 21:29:59,126 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 21:30:00,143 INFO No environment configuration found.
+2023-10-21 21:30:00,143 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 21:30:01,155 INFO No environment configuration found.
+2023-10-21 21:30:01,155 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 21:30:02,157 INFO No environment configuration found.
+2023-10-21 21:30:02,157 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 21:30:03,173 INFO No environment configuration found.
+2023-10-21 21:30:03,180 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 21:30:04,188 INFO No environment configuration found.
+2023-10-21 21:30:04,188 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 21:30:05,204 INFO No environment configuration found.
+2023-10-21 21:30:05,206 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 21:30:06,204 INFO No environment configuration found.
+2023-10-21 21:30:06,219 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 21:30:07,219 INFO No environment configuration found.
+2023-10-21 21:30:07,219 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 21:30:08,235 INFO No environment configuration found.
+2023-10-21 21:30:08,235 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 21:30:09,251 INFO No environment configuration found.
+2023-10-21 21:30:09,251 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 21:30:10,266 INFO No environment configuration found.
+2023-10-21 21:30:10,266 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 21:30:11,282 INFO No environment configuration found.
+2023-10-21 21:30:11,282 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 21:30:12,298 INFO No environment configuration found.
+2023-10-21 21:30:12,298 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 21:30:13,313 INFO No environment configuration found.
+2023-10-21 21:30:13,313 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 21:30:14,313 INFO No environment configuration found.
+2023-10-21 21:30:14,313 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 21:30:15,329 INFO No environment configuration found.
+2023-10-21 21:30:15,341 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 21:30:16,344 INFO No environment configuration found.
+2023-10-21 21:30:16,344 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 21:30:17,360 INFO No environment configuration found.
+2023-10-21 21:30:17,368 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 21:30:18,376 INFO No environment configuration found.
+2023-10-21 21:30:18,376 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 21:30:18,782 INFO (7, 1, '九點半', 1)
+2023-10-21 21:30:19,704 INFO VITS Synth Done, time used 0.31
+2023-10-21 21:30:19,712 INFO Sentiment Engine Infer: 0
+2023-10-21 21:30:19,717 INFO No environment configuration found.
+2023-10-21 21:30:19,717 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 21:30:20,543 INFO finished insertion
+2023-10-21 21:30:21,448 INFO finished voice process and sentimental analysis
+2023-10-21 21:30:21,950 INFO Stream finished.
+2023-10-21 21:30:21,950 INFO No environment configuration found.
+2023-10-21 21:30:21,951 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 21:30:22,954 INFO No environment configuration found.
+2023-10-21 21:30:22,963 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 21:30:23,969 INFO No environment configuration found.
+2023-10-21 21:30:23,969 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 21:30:24,985 INFO No environment configuration found.
+2023-10-21 21:30:24,989 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 21:30:26,001 INFO No environment configuration found.
+2023-10-21 21:30:26,001 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 21:30:27,001 INFO No environment configuration found.
+2023-10-21 21:30:27,001 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 21:30:28,017 INFO No environment configuration found.
+2023-10-21 21:30:28,017 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 21:30:29,032 INFO No environment configuration found.
+2023-10-21 21:30:29,032 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 21:30:30,048 INFO No environment configuration found.
+2023-10-21 21:30:30,048 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 21:30:31,063 INFO No environment configuration found.
+2023-10-21 21:30:31,063 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 21:30:32,079 INFO No environment configuration found.
+2023-10-21 21:30:32,079 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 21:30:33,079 INFO No environment configuration found.
+2023-10-21 21:30:33,079 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 21:30:34,095 INFO No environment configuration found.
+2023-10-21 21:30:34,095 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 21:30:35,110 INFO No environment configuration found.
+2023-10-21 21:30:35,110 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 21:30:36,126 INFO No environment configuration found.
+2023-10-21 21:30:36,126 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 21:30:37,142 INFO No environment configuration found.
+2023-10-21 21:30:37,142 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 21:30:38,157 INFO No environment configuration found.
+2023-10-21 21:30:38,157 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 21:30:39,157 INFO No environment configuration found.
+2023-10-21 21:30:39,157 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 21:30:40,184 INFO No environment configuration found.
+2023-10-21 21:30:40,184 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 23:07:03,281 INFO Initializing Server...
+2023-10-21 23:07:03,284 INFO Initializing TTS Service for character_paimon...
+2023-10-21 23:07:03,767 INFO Loaded checkpoint 'TTS/models/paimon6k_390000.pth' (iteration 8864)
+2023-10-21 23:07:03,767 INFO Initializing Sentiment Engine...
+2023-10-21 23:07:04,860 INFO No environment configuration found.
+2023-10-21 23:07:04,860 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 23:07:07,970 INFO (1, 123, '美國政府擴大禁止向中國出口半導體，輝達及AMD股價下跌。輝達受新規定影響嚴重，而AMD的北美客戶可能提供買點。英特爾或是新禁令最大受害者，因為其中國客戶占主要份額。', 0)
+2023-10-21 23:07:12,719 INFO VITS Synth Done, time used 3.94
+2023-10-21 23:07:12,759 INFO Sentiment Engine Infer: 0
+2023-10-21 23:07:12,760 INFO No environment configuration found.
+2023-10-21 23:07:12,760 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 23:07:17,073 INFO finished insertion
+2023-10-21 23:07:18,137 INFO finished voice process and sentimental analysis
+2023-10-21 23:07:18,639 INFO Stream finished.
+2023-10-21 23:07:18,641 INFO No environment configuration found.
+2023-10-21 23:07:18,643 INFO ManagedIdentityCredential will use IMDS
+2023-10-21 23:07:19,145 INFO (2, 123, '飲料店員呼籲客人使用環保杯時，不要害羞，直接告知以節省時間和避免浪費。不要隱藏環保杯，也請客人不要過度要求杯子容量，口徑太小，或不洗杯子要求店員清潔。', 0)
+2023-10-22 00:21:04,329 INFO Initializing Server...
+2023-10-22 00:21:04,340 INFO Initializing ChatGPT Service...
+2023-10-22 00:21:04,340 INFO chatGPT prompt: paimon35.txt
+2023-10-22 00:21:04,340 ERROR No module named 'wmi'
+2023-10-22 00:21:04,340 ERROR Traceback (most recent call last):
+  File "C:\Users\NTHUILST\Downloads\Digital_Life_Server-20231020T154914Z-001\Digital_Life_Server\SocketServer2.py", line 261, in <module>
+    s = Server()
+        ^^^^^^^^
+  File "C:\Users\NTHUILST\Downloads\Digital_Life_Server-20231020T154914Z-001\Digital_Life_Server\SocketServer2.py", line 90, in __init__
+    self.chat_gpt = GPTService2.GPTService()
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\NTHUILST\Downloads\Digital_Life_Server-20231020T154914Z-001\Digital_Life_Server\GPT\GPTService2.py", line 19, in __init__
+    mach_id = GPT.machine_id.get_machine_unique_identifier()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\NTHUILST\Downloads\Digital_Life_Server-20231020T154914Z-001\Digital_Life_Server\GPT\machine_id.py", line 12, in get_machine_unique_identifier
+    import wmi
+ModuleNotFoundError: No module named 'wmi'
+
+2023-10-22 00:21:58,204 INFO Initializing Server...
+2023-10-22 00:21:58,208 INFO Initializing ChatGPT Service...
+2023-10-22 00:21:58,208 INFO chatGPT prompt: paimon35.txt
+2023-10-22 00:21:58,208 ERROR No module named 'revChatGPT'
+2023-10-22 00:21:58,208 ERROR Traceback (most recent call last):
+  File "C:\Users\NTHUILST\Downloads\Digital_Life_Server-20231020T154914Z-001\Digital_Life_Server\SocketServer2.py", line 261, in <module>
+    s = Server()
+        ^^^^^^^^
+  File "C:\Users\NTHUILST\Downloads\Digital_Life_Server-20231020T154914Z-001\Digital_Life_Server\SocketServer2.py", line 90, in __init__
+    self.chat_gpt = GPTService2.GPTService()
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\NTHUILST\Downloads\Digital_Life_Server-20231020T154914Z-001\Digital_Life_Server\GPT\GPTService2.py", line 19, in __init__
+    from revChatGPT.V3 import Chatbot
+ModuleNotFoundError: No module named 'revChatGPT'
+
+2023-10-22 00:22:53,907 INFO Initializing Server...
+2023-10-22 00:22:53,907 INFO Initializing ChatGPT Service...
+2023-10-22 00:22:53,907 INFO chatGPT prompt: paimon35.txt
+2023-10-22 00:22:54,079 INFO you have your own api key. Great.
+2023-10-22 00:22:56,392 INFO API Chatbot initialized.
+2023-10-22 00:22:56,395 INFO Initializing TTS Service for character_paimon...
+2023-10-22 00:22:56,766 INFO Loaded checkpoint 'TTS/models/paimon6k_390000.pth' (iteration 8864)
+2023-10-22 00:22:56,766 INFO Initializing Sentiment Engine...
+2023-10-22 00:22:57,798 INFO No environment configuration found.
+2023-10-22 00:22:57,798 INFO ManagedIdentityCredential will use IMDS
+2023-10-22 00:23:00,938 INFO (1, 123, '美國政府擴大禁止向中國出口半導體，輝達及AMD股價下跌。輝達受新規定影響嚴重，而AMD的北美客戶可能提供買點。英特爾或是新禁令最大受害者，因為其中國客戶占主要份額。', 0)
+2023-10-22 00:23:06,470 INFO ChatGPT Stream Response: 哇啊，听说美国政府对中国的半导体出口禁令扩大了，这对輝達和AMD的股价造成了下跌影响。, @Time 4.73
+2023-10-22 00:23:08,575 INFO VITS Synth Done, time used 2.07
+2023-10-22 00:23:08,610 INFO Sentiment Engine Infer: 0
+2023-10-22 00:23:08,626 INFO No environment configuration found.
+2023-10-22 00:23:08,626 INFO ManagedIdentityCredential will use IMDS
+2023-10-22 00:23:10,968 INFO finished insertion
+2023-10-22 00:23:11,989 INFO finished voice process and sentimental analysis
+2023-10-22 00:23:11,990 INFO ChatGPT Stream Response: 輝達受到新规定的影响很严重，而AMD的北美客户可能会成为一个购买机会。, @Time 10.25
+2023-10-22 00:23:13,517 INFO VITS Synth Done, time used 1.53
+2023-10-22 00:23:13,532 INFO Sentiment Engine Infer: 0
+2023-10-22 00:23:13,548 INFO No environment configuration found.
+2023-10-22 00:23:13,548 INFO ManagedIdentityCredential will use IMDS
+2023-10-22 00:23:14,642 INFO finished insertion
+2023-10-22 00:23:15,703 INFO finished voice process and sentimental analysis
+2023-10-22 00:23:15,703 INFO ChatGPT Stream Response: 英特尔可能是新禁令的最大受害者，因为中国客户占据了主要份额。, @Time 13.97
+2023-10-22 00:23:16,969 INFO VITS Synth Done, time used 1.27
+2023-10-22 00:23:16,985 INFO Sentiment Engine Infer: 4
+2023-10-22 00:23:16,985 INFO No environment configuration found.
+2023-10-22 00:23:16,985 INFO ManagedIdentityCredential will use IMDS
+2023-10-22 00:23:18,142 INFO finished insertion
+2023-10-22 00:23:19,101 INFO finished voice process and sentimental analysis
+2023-10-22 00:23:19,605 INFO Stream finished.
+2023-10-22 00:23:19,605 INFO No environment configuration found.
+2023-10-22 00:23:19,605 INFO ManagedIdentityCredential will use IMDS
+2023-10-22 00:23:20,079 INFO (2, 123, '飲料店員呼籲客人使用環保杯時，不要害羞，直接告知以節省時間和避免浪費。不要隱藏環保杯，也請客人不要過度要求杯子容量，口徑太小，或不洗杯子要求店員清潔。', 0)
+2023-10-22 00:23:22,986 INFO ChatGPT Stream Response: 你、你不要这么小气嘛！, @Time 2.17
+2023-10-22 00:23:23,635 INFO VITS Synth Done, time used 0.65
+2023-10-22 00:23:23,637 INFO Sentiment Engine Infer: 2
+2023-10-22 00:23:23,637 INFO No environment configuration found.
+2023-10-22 00:23:23,637 INFO ManagedIdentityCredential will use IMDS
+2023-10-22 00:23:24,642 INFO finished insertion
+2023-10-22 00:23:25,666 INFO finished voice process and sentimental analysis
+2023-10-22 00:23:26,423 INFO ChatGPT Stream Response: 飲料店員呼籲客人使用環保杯时，不要害羞，直接告知以節省时间和避免浪費。, @Time 5.61
+2023-10-22 00:24:42,904 INFO Initializing Server...
+2023-10-22 00:24:42,907 INFO Initializing ChatGPT Service...
+2023-10-22 00:24:42,907 INFO chatGPT prompt: paimon35.txt
+2023-10-22 00:24:43,048 INFO you have your own api key. Great.
+2023-10-22 00:24:43,204 INFO API Chatbot initialized.
+2023-10-22 00:24:43,204 INFO Initializing TTS Service for character_paimon...
+2023-10-22 00:24:43,594 INFO Loaded checkpoint 'TTS/models/paimon6k_390000.pth' (iteration 8864)
+2023-10-22 00:24:43,594 INFO Initializing Sentiment Engine...
+2023-10-22 00:24:44,251 INFO No environment configuration found.
+2023-10-22 00:24:44,251 INFO ManagedIdentityCredential will use IMDS
+2023-10-22 00:24:46,642 INFO (1, 1, '以色列和巴勒斯坦10月7日爆發衝突至今兩周，雙方死傷人數持續增加中。隨著衝突加劇，黃金價格這幾天快速上衝至每盎司1,975美元，較兩周前的1,845美元漲幅7％，顯示避險需求升高。彭博經濟研究單位10月13日公布三種假設情境下全球經濟將受到的影響。第一種是若衝突僅限於加薩走廊，影響不大；第二種假設若戰事蔓延至黎巴嫩和敘利亞，則油價可能將由衝突爆發前每桶86美元，上漲10％至94美元。只是目前雖仍在第一種情境下，前天（10月18日）布蘭特原油期貨價格卻已上升至93美元。另，依據國際貨幣基金（IMF）的估計，油價每上漲10％，全球經濟成長率就會下滑0.15％；彭博的估計則較悲觀，估算油價若上漲10％，明年全球經濟成長率將由原本預測的2.7％，下調至2.4％第三種情境是伊朗和以色列直接衝突，彭博評估此情境發生的機率很低，但代價很高。此情境一旦發生，彭博認為雖不至於重現50年前，油價呈四倍上漲的石油危機，但若伊朗關閉全球20％石油運輸需經過的荷莫茲海峽，則油價可能上漲至每桶150美元左右，明年全球通膨則可能達6.7％，降息無望，全球成長率也可能將降至1.7％。此外，彭博認為中國大陸及其他新興經濟體的成長，將是全球不至於陷入負成長的主因；但若中國大陸景氣不如預期，全球成長率當然也將進一步下調。聯準會降息機會渺茫 消費及企業投資受限其實即使沒有以色列和巴勒斯坦的衝突，明年的全球經濟原本也不樂觀。美國聯準會主席鮑爾今年9月在傑克森洞 （Jackson Hole） 全球央行行長年會提出「higher for longer」的利率政策前瞻，更打消市場對聯準會降息的期望。最近債券價格持續下跌，長天期利率也因此持續升高，美國10年期公債殖利率現在已上升至4.96％ ，造成美國企業貸款利率大幅提高，並也使得30年期固定房貸利率提升至目前的8％（去年3月開始升息之前，美國30年期固定房貸利率僅為3.2％），個人消費及企業投資更因此將受到大幅限縮。尤其，企業投資看的不僅是名目利率，而更是實質利率；實質利率愈高，投資意願愈低。例如去年3月升息時，美國名目利率是零，通膨率8.5％，實質利率為負8.5％（名目利率0％ ，減去通膨率8.5％）。當時企業以極低的名目利率貸款，進行各項生產投資，而因物價上漲率平均是8.5％，產品平均售價也跟著提高。當時的負實質利率因此提供極強的投資誘因，更是導致當時許多企業大量投資擴產，後來庫存過高的原因之一。但一年半的升息之路下來，美國現在的實質利率已從負8.5％提升至1.55％ （名目利率5.25％，減去通膨率3.7％），實質利率上升了10個百分點；因此大幅降低投資誘因。歐美消費及投資減緩後，明年新興市場對歐美的出口也不樂觀。債務危機恐引爆 慎對經濟政治風險最後，高利率環境下，全球負債金額的飆高更是一大風險。國際金融協會（IIF）公布今年上半年之全球政府、企業和家庭累計負債規模，已達307兆美元，較十年前暴增100兆美元，且占GDP比率336％。鉅額的負債在利率走升之際，也較可能引爆債務危機。最近這兩個月來，世界銀行（WB）、國際貨幣基金（IMF）、OECD、世界貿易組織（WTO），以及惠譽信評（Fitch）等國際機構，不約而同調降對明年全球經濟成長的預測。綜合其調降原因，則集中在明年全球製造業下滑、貿易額下降、中國大陸經濟成長減緩、尤其是歐美等國升息負面影響顯現、以及地緣政治緊張等因素。俄烏戰爭開戰一年多來未見解決，如今以巴衝突又起；經濟政治風險交錯盤結下，明年全球的經濟風險，應謹慎應對。 幫我統整成50字的大義')
+2023-10-22 00:24:53,139 INFO ChatGPT Stream Response: 全球经济面临多重风险，包括以色列和巴勒斯坦冲突、高油价、美国利率上升、全球债务激增等。, @Time 5.90
+2023-10-22 00:24:55,638 INFO VITS Synth Done, time used 2.50
+2023-10-22 00:24:55,680 INFO Sentiment Engine Infer: 4
+2023-10-22 00:24:55,683 INFO No environment configuration found.
+2023-10-22 00:24:55,684 INFO ManagedIdentityCredential will use IMDS
+2023-10-22 00:24:57,498 INFO finished insertion
+2023-10-22 00:24:58,399 INFO finished voice process and sentimental analysis
+2023-10-22 00:24:58,400 INFO ChatGPT Stream Response: 这些因素可能导致全球经济增长放缓、消费和投资受限。, @Time 11.16
+2023-10-22 00:24:59,547 INFO VITS Synth Done, time used 1.15
+2023-10-22 00:24:59,547 INFO Sentiment Engine Infer: 1
+2023-10-22 00:24:59,564 INFO No environment configuration found.
+2023-10-22 00:24:59,564 INFO ManagedIdentityCredential will use IMDS
+2023-10-22 00:25:00,392 INFO finished insertion
+2023-10-22 00:25:01,302 INFO finished voice process and sentimental analysis
+2023-10-22 00:25:01,307 INFO ChatGPT Stream Response: 在当前的经济政治环境下，需要谨慎应对全球经济风险。, @Time 14.07
+2023-10-22 00:25:02,483 INFO VITS Synth Done, time used 1.17
+2023-10-22 00:25:02,532 INFO Sentiment Engine Infer: 0
+2023-10-22 00:25:02,532 INFO No environment configuration found.
+2023-10-22 00:25:02,532 INFO ManagedIdentityCredential will use IMDS
+2023-10-22 00:25:03,376 INFO finished insertion
+2023-10-22 00:25:04,287 INFO finished voice process and sentimental analysis
+2023-10-22 00:25:04,790 INFO Stream finished.
+2023-10-22 00:25:04,790 INFO No environment configuration found.
+2023-10-22 00:25:04,790 INFO ManagedIdentityCredential will use IMDS
+2023-10-22 00:25:05,782 INFO No environment configuration found.
+2023-10-22 00:25:05,782 INFO ManagedIdentityCredential will use IMDS
+2023-10-22 00:25:06,782 INFO No environment configuration found.
+2023-10-22 00:25:06,782 INFO ManagedIdentityCredential will use IMDS
+2023-10-22 00:25:07,782 INFO No environment configuration found.
+2023-10-22 00:25:07,782 INFO ManagedIdentityCredential will use IMDS
+2023-10-22 00:25:08,782 INFO No environment configuration found.
+2023-10-22 00:25:08,782 INFO ManagedIdentityCredential will use IMDS
+2023-10-22 00:25:09,782 INFO No environment configuration found.
+2023-10-22 00:25:09,782 INFO ManagedIdentityCredential will use IMDS
+2023-10-22 00:25:10,766 INFO No environment configuration found.
+2023-10-22 00:25:10,779 INFO ManagedIdentityCredential will use IMDS
+2023-10-22 00:25:11,767 INFO No environment configuration found.
+2023-10-22 00:25:11,776 INFO ManagedIdentityCredential will use IMDS
+2023-10-22 00:25:12,767 INFO No environment configuration found.
+2023-10-22 00:25:12,767 INFO ManagedIdentityCredential will use IMDS
+2023-10-22 00:25:13,767 INFO No environment configuration found.
+2023-10-22 00:25:13,779 INFO ManagedIdentityCredential will use IMDS
+2023-10-22 00:25:14,767 INFO No environment configuration found.
+2023-10-22 00:25:14,767 INFO ManagedIdentityCredential will use IMDS
+2023-10-22 00:25:15,767 INFO No environment configuration found.
+2023-10-22 00:25:15,776 INFO ManagedIdentityCredential will use IMDS
+2023-10-22 00:25:17,173 INFO Error: <built-in function connect> returned a result with an exception set
+2023-10-22 00:25:17,173 INFO No environment configuration found.
+2023-10-22 00:25:17,173 INFO ManagedIdentityCredential will use IMDS
+2023-10-22 00:25:18,173 INFO No environment configuration found.
+2023-10-22 00:25:18,173 INFO ManagedIdentityCredential will use IMDS
+2023-10-22 00:25:19,173 INFO No environment configuration found.
+2023-10-22 00:25:19,178 INFO ManagedIdentityCredential will use IMDS
+2023-10-22 00:38:11,094 INFO Initializing Server...
+2023-10-22 00:38:11,094 INFO Initializing ChatGPT Service...
+2023-10-22 00:38:11,094 INFO chatGPT prompt: paimon35.txt
+2023-10-22 00:38:11,251 INFO you have your own api key. Great.
+2023-10-22 00:38:11,391 INFO API Chatbot initialized.
+2023-10-22 00:38:11,391 INFO Initializing TTS Service for character_paimon...
+2023-10-22 00:38:11,782 INFO Loaded checkpoint 'TTS/models/paimon6k_390000.pth' (iteration 8864)
+2023-10-22 00:38:11,782 INFO Initializing Sentiment Engine...
+2023-10-22 00:38:12,782 INFO No environment configuration found.
+2023-10-22 00:38:12,782 INFO ManagedIdentityCredential will use IMDS
+2023-10-22 00:38:15,704 INFO (1, 1, '以色列和巴勒斯坦10月7日爆發衝突至今兩周，雙方死傷人數持續增加中。隨著衝突加劇，黃金價格這幾天快速上衝至每盎司1,975美元，較兩周前的1,845美元漲幅7％，顯示避險需求升高。彭博經濟研究單位10月13日公布三種假設情境下全球經濟將受到的影響。第一種是若衝突僅限於加薩走廊，影響不大；第二種假設若戰事蔓延至黎巴嫩和敘利亞，則油價可能將由衝突爆發前每桶86美元，上漲10％至94美元。只是目前雖仍在第一種情境下，前天（10月18日）布蘭特原油期貨價格卻已上升至93美元。另，依據國際貨幣基金（IMF）的估計，油價每上漲10％，全球經濟成長率就會下滑0.15％；彭博的估計則較悲觀，估算油價若上漲10％，明年全球經濟成長率將由原本預測的2.7％，下調至2.4％第三種情境是伊朗和以色列直接衝突，彭博評估此情境發生的機率很低，但代價很高。此情境一旦發生，彭博認為雖不至於重現50年前，油價呈四倍上漲的石油危機，但若伊朗關閉全球20％石油運輸需經過的荷莫茲海峽，則油價可能上漲至每桶150美元左右，明年全球通膨則可能達6.7％，降息無望，全球成長率也可能將降至1.7％。此外，彭博認為中國大陸及其他新興經濟體的成長，將是全球不至於陷入負成長的主因；但若中國大陸景氣不如預期，全球成長率當然也將進一步下調。聯準會降息機會渺茫 消費及企業投資受限其實即使沒有以色列和巴勒斯坦的衝突，明年的全球經濟原本也不樂觀。美國聯準會主席鮑爾今年9月在傑克森洞 （Jackson Hole） 全球央行行長年會提出「higher for longer」的利率政策前瞻，更打消市場對聯準會降息的期望。最近債券價格持續下跌，長天期利率也因此持續升高，美國10年期公債殖利率現在已上升至4.96％ ，造成美國企業貸款利率大幅提高，並也使得30年期固定房貸利率提升至目前的8％（去年3月開始升息之前，美國30年期固定房貸利率僅為3.2％），個人消費及企業投資更因此將受到大幅限縮。尤其，企業投資看的不僅是名目利率，而更是實質利率；實質利率愈高，投資意願愈低。例如去年3月升息時，美國名目利率是零，通膨率8.5％，實質利率為負8.5％（名目利率0％ ，減去通膨率8.5％）。當時企業以極低的名目利率貸款，進行各項生產投資，而因物價上漲率平均是8.5％，產品平均售價也跟著提高。當時的負實質利率因此提供極強的投資誘因，更是導致當時許多企業大量投資擴產，後來庫存過高的原因之一。但一年半的升息之路下來，美國現在的實質利率已從負8.5％提升至1.55％ （名目利率5.25％，減去通膨率3.7％），實質利率上升了10個百分點；因此大幅降低投資誘因。歐美消費及投資減緩後，明年新興市場對歐美的出口也不樂觀。債務危機恐引爆 慎對經濟政治風險最後，高利率環境下，全球負債金額的飆高更是一大風險。國際金融協會（IIF）公布今年上半年之全球政府、企業和家庭累計負債規模，已達307兆美元，較十年前暴增100兆美元，且占GDP比率336％。鉅額的負債在利率走升之際，也較可能引爆債務危機。最近這兩個月來，世界銀行（WB）、國際貨幣基金（IMF）、OECD、世界貿易組織（WTO），以及惠譽信評（Fitch）等國際機構，不約而同調降對明年全球經濟成長的預測。綜合其調降原因，則集中在明年全球製造業下滑、貿易額下降、中國大陸經濟成長減緩、尤其是歐美等國升息負面影響顯現、以及地緣政治緊張等因素。俄烏戰爭開戰一年多來未見解決，如今以巴衝突又起；經濟政治風險交錯盤結下，明年全球的經濟風險，應謹慎應對。 幫我統整成50字的大義')
+2023-10-22 00:38:24,001 INFO ChatGPT Stream Response: 全球经济面临多重风险，包括以色列和巴勒斯坦冲突、高油价、美国利率上升、全球债务飙升等。, @Time 7.50
+2023-10-22 00:38:26,576 INFO VITS Synth Done, time used 2.56
+2023-10-22 00:38:26,576 INFO Sentiment Engine Infer: 4
+2023-10-22 00:38:26,592 INFO No environment configuration found.
+2023-10-22 00:38:26,595 INFO ManagedIdentityCredential will use IMDS
+2023-10-22 00:38:29,001 INFO finished insertion
+2023-10-22 00:38:30,038 INFO finished voice process and sentimental analysis
+2023-10-22 00:38:30,038 INFO ChatGPT Stream Response: 这些因素可能导致全球经济增长放缓，需谨慎应对。, @Time 13.54
+2023-10-22 00:38:31,157 INFO VITS Synth Done, time used 1.12
+2023-10-22 00:38:31,172 INFO Sentiment Engine Infer: 0
+2023-10-22 00:38:31,172 INFO No environment configuration found.
+2023-10-22 00:38:31,172 INFO ManagedIdentityCredential will use IMDS
+2023-10-22 00:38:32,173 INFO finished insertion
+2023-10-22 00:38:33,175 INFO finished voice process and sentimental analysis
+2023-10-22 00:38:33,676 INFO Stream finished.
+2023-10-22 00:38:33,677 INFO No environment configuration found.
+2023-10-22 00:38:33,677 INFO ManagedIdentityCredential will use IMDS
+2023-10-22 00:38:35,001 INFO No environment configuration found.
+2023-10-22 00:38:35,017 INFO ManagedIdentityCredential will use IMDS
+2023-10-22 00:38:36,360 INFO No environment configuration found.
+2023-10-22 00:38:36,360 INFO ManagedIdentityCredential will use IMDS
+2023-10-22 00:38:37,719 INFO No environment configuration found.
+2023-10-22 00:38:37,721 INFO ManagedIdentityCredential will use IMDS
+2023-10-22 00:38:38,982 INFO No environment configuration found.
+2023-10-22 00:38:38,984 INFO ManagedIdentityCredential will use IMDS
+2023-10-22 00:38:40,251 INFO No environment configuration found.
+2023-10-22 00:38:40,267 INFO ManagedIdentityCredential will use IMDS
+2023-10-22 00:38:41,530 INFO No environment configuration found.
+2023-10-22 00:38:41,533 INFO ManagedIdentityCredential will use IMDS
+2023-10-22 00:38:42,782 INFO No environment configuration found.
+2023-10-22 00:38:42,798 INFO ManagedIdentityCredential will use IMDS
+2023-10-22 00:38:44,095 INFO No environment configuration found.
+2023-10-22 00:38:44,095 INFO ManagedIdentityCredential will use IMDS
